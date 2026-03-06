@@ -1,0 +1,12 @@
+# BolChat — https://bolchat.ai
+# Allow all web crawlers full access
+
+User-agent: *
+Allow: /
+
+# Block access to Next.js internals
+Disallow: /_next/
+Disallow: /api/
+
+# Sitemap location — submitted to Google Search Console
+Sitemap: https://bolchat.ai/sitemap.xml

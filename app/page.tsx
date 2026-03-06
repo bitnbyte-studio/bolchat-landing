@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
+import { BolchatLogo } from "./components/BolchatLogo";
 
 const features = [
   {
@@ -97,37 +98,7 @@ export default function Home() {
 
       <nav className="sticky top-0 z-50 border-b border-rose-100/60 bg-white/70 backdrop-blur-md">
         <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6">
-          <div className="flex items-center gap-3">
-            <div className="grid h-11 w-11 place-items-center rounded-[14px] bg-gradient-to-br from-[#ff5fa2] to-[#ff4f86] shadow-[0_10px_22px_rgba(255,95,162,0.42),0_3px_8px_rgba(255,79,134,0.25)]">
-              <svg
-                viewBox="0 0 24 24"
-                className="h-6 w-6 text-white"
-                fill="none"
-                aria-hidden="true"
-              >
-                <rect
-                  x="4.5"
-                  y="4.5"
-                  width="15"
-                  height="12"
-                  rx="3"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                />
-                <path
-                  d="M9.5 16.5v2.4l2.9-2.4"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <span className="text-[2rem] font-bold leading-none tracking-tight">
-              <span className="text-[#23192e]">Bol</span>
-              <span className="text-rose-600">Chat</span>
-            </span>
-          </div>
+          <BolchatLogo size="md" />
 
           <div className="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
             <a href="#product" className="transition-colors hover:text-rose-500">
@@ -158,7 +129,7 @@ export default function Home() {
       <section id="product" className="relative px-6 pb-28 pt-20">
         <div className="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-2">
           <div>
-           
+
 
             <h1 className="mb-6 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
               Multilingual AI Chatbots for
@@ -426,37 +397,7 @@ export default function Home() {
 
       <footer id="contact" className="border-t border-rose-100/60 bg-white/30 py-12">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row">
-          <div className="flex items-center gap-3">
-            <div className="grid h-11 w-11 place-items-center rounded-[14px] bg-gradient-to-br from-[#ff5fa2] to-[#ff4f86] shadow-[0_10px_22px_rgba(255,95,162,0.42),0_3px_8px_rgba(255,79,134,0.25)]">
-              <svg
-                viewBox="0 0 24 24"
-                className="h-6 w-6 text-white"
-                fill="none"
-                aria-hidden="true"
-              >
-                <rect
-                  x="4.5"
-                  y="4.5"
-                  width="15"
-                  height="12"
-                  rx="3"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                />
-                <path
-                  d="M9.5 16.5v2.4l2.9-2.4"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <span className="text-[2rem] font-bold leading-none tracking-tight">
-              <span className="text-[#23192e]">Bol</span>
-              <span className="text-rose-600">Chat</span>
-            </span>
-          </div>
+          <BolchatLogo size="sm" />
 
           <div className="flex gap-8 text-sm font-medium text-slate-500">
             <a href="#product" className="hover:text-rose-500">
