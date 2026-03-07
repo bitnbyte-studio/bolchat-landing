@@ -47,10 +47,12 @@ const CONTACTS = [
     },
 ];
 
+import { Container } from "../components/Container";
+
 export function ContactCardsSection() {
     return (
-        <section className="px-6 py-16 md:py-24">
-            <div className="mx-auto max-w-7xl">
+        <section className="py-16 md:py-24">
+            <Container>
                 <div className="mb-16 text-center">
                     <h2 className="mb-4 text-4xl font-bold text-slate-900">Get in Touch</h2>
                     <p className="text-lg text-slate-500">Choose the right channel for your needs.</p>
@@ -77,7 +79,7 @@ export function ContactCardsSection() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </Container>
         </section>
     );
 }

@@ -100,13 +100,15 @@ const BRANDS = [
     { id: "magento", Logo: MagentoLogo },
 ];
 
+import { Container } from "./Container";
+
 export function EcosystemSection() {
     return (
         <section
             id="ecosystem"
-            className="border-y border-slate-100 bg-white/40 px-6 py-12 md:py-16"
+            className="border-y border-slate-100 bg-white/40 py-12 md:py-16"
         >
-            <div className="mx-auto max-w-7xl text-center">
+            <Container className="text-center">
                 <h2 className="mb-12 text-2xl font-bold text-slate-800 tracking-tight">
                     Seamlessly Integrated with Your Tech Stack
                 </h2>
@@ -125,7 +127,7 @@ export function EcosystemSection() {
                 <p className="mt-12 text-sm font-medium text-rose-400">
                     + Over 100+ native integrations available via Zapier and Webhooks.
                 </p>
-            </div>
+            </Container>
         </section>
     );
 }

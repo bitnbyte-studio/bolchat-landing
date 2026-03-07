@@ -18,10 +18,12 @@ const steps = [
     },
 ];
 
+import { Container } from "./Container";
+
 export function HowItWorksSection() {
     return (
         <section id="demo" className="border-y border-rose-100/60 bg-white/40 py-16 md:py-24 backdrop-blur-sm">
-            <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-16 px-6 lg:flex-row">
+            <Container className="flex flex-col items-center gap-16 lg:flex-row">
                 {/* ── Left: Steps ── */}
                 <div className="flex-1">
                     <h2 className="mb-8 text-4xl font-bold md:text-5xl">
@@ -100,7 +102,7 @@ export function HowItWorksSection() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Container>
         </section>
     );
 }

@@ -53,6 +53,8 @@ const DEMO_HIGHLIGHTS = [
     },
 ];
 
+import { Container } from "../components/Container";
+
 export function DemoFormSection() {
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -67,8 +69,8 @@ export function DemoFormSection() {
     };
 
     return (
-        <section id="demo-form" className="relative px-6 py-12 md:py-16">
-            <div className="mx-auto grid w-full max-w-7xl items-start gap-16 lg:grid-cols-2">
+        <section id="demo-form" className="relative py-12 md:py-16">
+            <Container className="grid items-start gap-16 lg:grid-cols-2">
 
                 {/* ── Left: Form ── */}
                 <div className="rounded-[3rem] border border-white/60 bg-white p-8 shadow-2xl md:p-12">
@@ -215,7 +217,7 @@ export function DemoFormSection() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </Container>
         </section>
     );
 }

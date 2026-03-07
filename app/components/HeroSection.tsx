@@ -1,9 +1,11 @@
 "use client";
 
+import { Container } from "./Container";
+
 export function HeroSection() {
     return (
-        <section id="product" className="relative px-6 pb-8 pt-24 md:pb-28 md:pt-28">
-            <div className="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-2">
+        <section id="product" className="relative pb-8 pt-24 md:pb-28 md:pt-28">
+            <Container className="grid items-center gap-12 lg:grid-cols-2">
                 {/* ── Left: Copy ── */}
                 <div>
                     <h1 className="mb-6 text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-7xl">
@@ -101,7 +103,7 @@ export function HeroSection() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Container>
         </section>
     );
 }

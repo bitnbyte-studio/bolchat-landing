@@ -47,10 +47,12 @@ function Icon({ type }: { type: string }) {
     );
 }
 
+import { Container } from "./Container";
+
 export function FeaturesSection() {
     return (
-        <section className="relative px-6 pb-16 pt-8 md:py-24">
-            <div className="mx-auto w-full max-w-7xl">
+        <section className="relative pb-16 pt-8 md:py-24">
+            <Container>
                 <div className="mx-auto mb-10 max-w-2xl text-center md:mb-16">
                     <h2 className="mb-6 text-4xl font-bold md:text-5xl">Built for high-growth teams</h2>
                     <p className="text-lg text-slate-600">
@@ -72,7 +74,7 @@ export function FeaturesSection() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </Container>
         </section>
     );
 }

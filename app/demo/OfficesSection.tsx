@@ -22,10 +22,12 @@ const OFFICES = [
     },
 ];
 
+import { Container } from "../components/Container";
+
 export function OfficesSection() {
     return (
-        <section className="border-y border-rose-100/50 bg-white/40 px-6 py-16 backdrop-blur-sm md:py-24">
-            <div className="mx-auto max-w-7xl">
+        <section className="border-y border-rose-100/50 bg-white/40 py-16 backdrop-blur-sm md:py-24">
+            <Container>
                 <div className="mb-16 text-center">
                     <h2 className="mb-4 text-4xl font-bold text-slate-900">Meet Our Team</h2>
                     <p className="text-slate-500">Visit one of our global innovation hubs.</p>
@@ -49,7 +51,7 @@ export function OfficesSection() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </Container>
         </section>
     );
 }

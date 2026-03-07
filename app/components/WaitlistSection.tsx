@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Container } from "./Container";
 
 export function WaitlistSection() {
     const [email, setEmail] = useState("");
@@ -19,8 +20,8 @@ export function WaitlistSection() {
     };
 
     return (
-        <section id="waitlist" className="px-6 py-16 md:py-24">
-            <div className="mx-auto w-full max-w-4xl text-center">
+        <section id="waitlist" className="py-16 md:py-24">
+            <Container maxWidth="max-w-4xl" className="text-center">
                 <div className="relative overflow-hidden rounded-[3rem] bg-gradient-to-br from-rose-500 to-pink-600 p-12 text-white md:p-20">
                     {/* Background blobs */}
                     <div className="absolute right-0 top-0 h-64 w-64 translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10 blur-3xl" />
@@ -61,7 +62,7 @@ export function WaitlistSection() {
 
                     <p className="relative z-10 mt-6 text-sm text-rose-200">No spam. Just updates on your terms.</p>
                 </div>
-            </div>
+            </Container>
         </section>
     );
 }

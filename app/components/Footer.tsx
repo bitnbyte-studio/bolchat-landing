@@ -1,11 +1,12 @@
 "use client";
 
 import { BolchatLogo } from "./BolchatLogo";
+import { Container } from "./Container";
 
 export function Footer() {
     return (
         <footer id="contact" className="border-t border-rose-100/50 bg-white/30 py-16">
-            <div className="mx-auto w-full max-w-7xl px-6">
+            <Container>
                 <div className="mb-12 grid gap-12 md:grid-cols-4 lg:gap-8">
                     {/* Brand column */}
                     <div className="md:col-span-2">
@@ -72,14 +73,14 @@ export function Footer() {
                 </div>
 
                 <div className="flex flex-col items-center justify-between gap-6 border-t border-slate-200/60 pt-8 text-sm font-medium text-slate-400 md:flex-row md:pt-12">
-                    <p>© 2024 BolChat AI. All rights reserved.</p>
+                    <p>© 2026 BolChat AI. All rights reserved.</p>
                     <div className="flex gap-8">
                         {/* More links if required by the design */}
                         <a href="#" className="hover:text-rose-500">Status Check</a>
                         <a href="#" className="hover:text-rose-500">Security</a>
                     </div>
                 </div>
-            </div>
+            </Container>
         </footer>
     );
 }

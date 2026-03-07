@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { BolchatLogo } from "./BolchatLogo";
+import { Container } from "./Container";
 
 const NAV_LINKS = [
     { label: "Product", href: "#product" },
@@ -51,7 +52,7 @@ export function Navbar() {
                     : "bg-white/60 backdrop-blur-md",
             ].join(" ")}
         >
-            <nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6">
+            <Container as="nav" className="flex h-20 items-center justify-between">
                 {/* ── Logo ── */}
                 <div className="lg:hidden">
                     <BolchatLogo size="sm" />
@@ -112,7 +113,7 @@ export function Navbar() {
                         Request Demo
                     </a>
                 </div>
-            </nav>
+            </Container>
 
             {/* ── Mobile Menu Dropdown ── */}
             {mobileMenuOpen && (

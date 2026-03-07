@@ -42,11 +42,9 @@ export function BolchatLogo({ size = "md" }: BolchatLogoProps) {
                 }}
             >
                 <span
+                    className="bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-rose-700 font-bold tracking-tight"
                     style={{
                         fontSize: s.font,
-                        fontWeight: 800,
-                        letterSpacing: "-0.04em",
-                        color: "#1A1035",
                     }}
                 >
                     olChat

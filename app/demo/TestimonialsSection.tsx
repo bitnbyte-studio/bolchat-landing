@@ -34,10 +34,12 @@ function Stars() {
     );
 }
 
+import { Container } from "../components/Container";
+
 export function TestimonialsSection() {
     return (
-        <section className="px-6 py-16 md:py-24">
-            <div className="mx-auto max-w-7xl">
+        <section className="py-16 md:py-24">
+            <Container>
                 <div className="mb-16 text-center">
                     <h2 className="mb-4 text-4xl font-bold text-slate-900">Customer Voices</h2>
                     <p className="text-slate-500">What our clients say about BolChat&apos;s support.</p>
@@ -66,7 +68,7 @@ export function TestimonialsSection() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </Container>
         </section>
     );
 }
