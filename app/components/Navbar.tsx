@@ -3,13 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import { BolchatLogo } from "./BolchatLogo";
 import { Container } from "./Container";
+import Link from "next/link";
+import { MoveRight, Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
-    { label: "Product", href: "#product" },
-    { label: "Capabilities", href: "#capabilities" },
-    { label: "Success", href: "#success" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Developers", href: "#developers" },
+    { label: "Features", href: "/features" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "About", href: "/about" },
+    { label: "Blog", href: "/blog" },
 ];
 
 export function Navbar() {
@@ -22,15 +23,11 @@ export function Navbar() {
         const handleScroll = () => {
             const currentY = window.scrollY;
 
-            // Show/hide based on scroll direction
             if (currentY < 80) {
-                // Always show near the top
                 setVisible(true);
             } else if (currentY < lastScrollY.current) {
-                // Scrolling UP — reveal
                 setVisible(true);
             } else if (currentY > lastScrollY.current + 4) {
-                // Scrolling DOWN — hide (small dead-zone to avoid jitter)
                 setVisible(false);
             }
 
@@ -49,99 +46,83 @@ export function Navbar() {
                 visible ? "translate-y-0" : "-translate-y-full",
                 scrolled
                     ? "border-b border-rose-100/60 bg-white/80 shadow-sm shadow-rose-100/20 backdrop-blur-xl"
-                    : "bg-white/60 backdrop-blur-md",
+                    : "bg-transparent",
             ].join(" ")}
         >
             <Container as="nav" className="flex h-20 items-center justify-between">
                 {/* ── Logo ── */}
-                <div className="lg:hidden">
-                    <BolchatLogo size="sm" />
-                </div>
-                <div className="hidden lg:block">
-                    <BolchatLogo size="md" />
-                </div>
+                <Link href="/" className="hover:opacity-80 transition-opacity">
+                    <div className="lg:hidden">
+                        <BolchatLogo size="sm" />
+                    </div>
+                    <div className="hidden lg:block">
+                        <BolchatLogo size="md" />
+                    </div>
+                </Link>
 
                 {/* ── Centre links ── */}
-                <div className="hidden items-center gap-7 text-sm font-medium text-slate-600 lg:flex">
+                <div className="hidden items-center gap-8 text-sm font-semibold text-slate-700 lg:flex">
                     {NAV_LINKS.map((link) => (
-                        <a
+                        <Link
                             key={link.label}
                             href={link.href}
                             className="relative py-1 transition-colors hover:text-rose-500 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:scale-x-0 after:rounded-full after:bg-rose-400 after:transition-transform after:duration-200 hover:after:scale-x-100"
                         >
                             {link.label}
-                        </a>
+                        </Link>
                     ))}
                 </div>
 
-                {/* ── Mobile Menu Toggle ── */}
-                <div className="flex items-center gap-3 sm:gap-4 lg:hidden">
-                    <a
-                        href="/demo"
-                        className="rounded-full bg-slate-900 px-4 py-2 text-xs font-semibold text-white shadow-md transition-all hover:bg-rose-600 hover:shadow-rose-200"
+                {/* ── CTA buttons (Desktop) ── */}
+                <div className="hidden items-center gap-6 lg:flex">
+                    <Link
+                        href="/contact"
+                        className="group inline-flex items-center gap-2 rounded-2xl bg-slate-900 px-6 py-3 text-sm font-bold text-white shadow-xl shadow-slate-900/10 transition-all hover:bg-slate-800 hover:shadow-slate-900/20 active:scale-[0.98]"
                     >
-                        Request Demo
-                    </a>
-                    <button
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="p-2 text-slate-600 focus:outline-none"
-                    >
-                        {mobileMenuOpen ? (
-                            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        ) : (
-                            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        )}
-                    </button>
+                        Book a Demo
+                        <MoveRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
                 </div>
 
-                {/* ── CTA buttons (Desktop) ── */}
-                <div className="hidden items-center gap-3 sm:gap-4 lg:flex">
-                    <a
-                        href="#waitlist"
-                        className="text-sm font-semibold text-slate-600 transition-colors hover:text-rose-500"
+                {/* ── Mobile Menu Toggle ── */}
+                <div className="flex items-center gap-4 lg:hidden">
+                    <Link
+                        href="/contact"
+                        className="rounded-xl bg-slate-900 px-4 py-2 text-xs font-bold text-white shadow-md active:scale-95"
                     >
-                        Early Access
-                    </a>
-                    <a
-                        href="/demo"
-                        className="rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:bg-rose-600 hover:shadow-rose-200"
+                        Demo
+                    </Link>
+                    <button
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        className="p-2 text-slate-700 focus:outline-none"
                     >
-                        Request Demo
-                    </a>
+                        {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                    </button>
                 </div>
             </Container>
 
             {/* ── Mobile Menu Dropdown ── */}
             {mobileMenuOpen && (
-                <div className="border-t border-rose-100/60 bg-white shadow-lg lg:hidden">
-                    <div className="flex flex-col px-6 py-4">
+                <div className="border-t border-rose-100/60 bg-white shadow-2xl lg:hidden">
+                    <div className="flex flex-col px-6 py-6 space-y-2">
                         {NAV_LINKS.map((link) => (
-                            <a
+                            <Link
                                 key={link.label}
                                 href={link.href}
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="block py-3 text-base font-medium text-slate-600 hover:text-rose-500"
+                                className="block py-3 text-lg font-bold text-slate-700 hover:text-rose-500 border-b border-slate-50"
                             >
                                 {link.label}
-                            </a>
+                            </Link>
                         ))}
-                        <div className="mt-4 border-t border-slate-100 pt-4">
-                            <a
-                                href="/demo"
-                                className="block py-3 text-base font-medium text-slate-600 hover:text-rose-500"
+                        <div className="pt-4 flex flex-col gap-4">
+                            <Link
+                                href="/contact"
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="flex h-14 items-center justify-center rounded-2xl bg-slate-900 font-bold text-white"
                             >
-                                Request Demo
-                            </a>
-                            <a
-                                href="#waitlist"
-                                className="block py-3 text-base font-medium text-slate-600 hover:text-rose-500"
-                            >
-                                Early Access
-                            </a>
+                                Book a Demo
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -149,3 +130,4 @@ export function Navbar() {
         </header>
     );
 }
+

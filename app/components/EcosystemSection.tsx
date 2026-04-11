@@ -106,10 +106,10 @@ export function EcosystemSection() {
     return (
         <section
             id="ecosystem"
-            className="border-y border-slate-100 bg-white/40 py-12 md:py-16"
+            className="border-y border-slate-100 bg-white/40 py-8 md:py-12"
         >
             <Container className="text-center">
-                <h2 className="mb-12 text-2xl font-bold text-slate-800 tracking-tight">
+                <h2 className="mb-10 text-xl font-bold text-slate-800 tracking-tight">
                     Seamlessly Integrated with Your Tech Stack
                 </h2>
 
@@ -117,14 +117,14 @@ export function EcosystemSection() {
                     {BRANDS.map(({ id, Logo }) => (
                         <div
                             key={id}
-                            className="flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-default"
+                            className="flex items-center justify-center transition-all duration-300 cursor-default hover:scale-105"
                         >
                             <Logo />
                         </div>
                     ))}
                 </div>
 
-                <p className="mt-12 text-sm font-medium text-rose-400">
+                <p className="mt-10 text-sm font-medium text-rose-500">
                     + Over 100+ native integrations available via Zapier and Webhooks.
                 </p>
             </Container>

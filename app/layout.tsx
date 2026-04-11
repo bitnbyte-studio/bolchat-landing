@@ -1,54 +1,48 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { JsonLd } from "./components/JsonLd";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
-});
-
-const plusJakarta = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta",
-  subsets: ["latin"],
-  weight: ["700", "800"],
   display: "swap",
 });
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Canonical origin — change this to your production domain before going live.
    ───────────────────────────────────────────────────────────────────────────── */
-const SITE_URL = "https://bolchat.ai";
+const SITE_URL = "https://bolchat.tech";
 
 export const metadata: Metadata = {
   /* ── Title ──────────────────────────────────────────────────────────────── */
   title: {
-    default: "BolChat — Multilingual AI Chatbots for Modern Businesses",
+    default: "BolChat — Instantly Scale Your Customer Support with Multilingual AI",
     template: "%s | BolChat",
   },
 
   /* ── Core meta ──────────────────────────────────────────────────────────── */
   description:
-    "Deploy context-aware AI chatbots in minutes. BolChat supports 50+ languages, integrates with your existing stack, and automates customer support at scale.",
+    "BolChat is an enterprise-grade AI support platform that instantly resolves customer inquiries in 50+ languages. Scale your support operations 10x without adding headcount.",
   keywords: [
-    "AI chatbot",
+    "AI customer support",
     "multilingual chatbot",
     "customer support automation",
     "conversational AI",
-    "chatbot platform",
     "BolChat",
-    "AI customer service",
-    "GPT chatbot",
-    "business chatbot",
-    "no-code chatbot",
+    "support ticketing automation",
+    "AI agents",
+    "enterprise customer service",
+    "customer experience AI",
   ],
   authors: [{ name: "BolChat", url: SITE_URL }],
-  creator: "BitnByte Studio",
+  creator: "BolChat Inc.",
   publisher: "BolChat",
 
   /* ── Canonical URL ──────────────────────────────────────────────────────── */
@@ -77,15 +71,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "BolChat",
-    title: "BolChat — Multilingual AI Chatbots for Modern Businesses",
+    title: "BolChat — Instantly Scale Your Customer Support with Multilingual AI",
     description:
-      "Deploy context-aware AI chatbots in minutes. Supports 50+ languages and automates customer support at scale.",
+      "BolChat is an enterprise-grade AI support platform that instantly resolves customer inquiries in 50+ languages.",
     images: [
       {
         url: `${SITE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "BolChat — AI Chatbot Platform",
+        alt: "BolChat — Customer Support Automation",
         type: "image/png",
       },
     ],
@@ -94,11 +88,11 @@ export const metadata: Metadata = {
   /* ── Twitter / X Card ───────────────────────────────────────────────────── */
   twitter: {
     card: "summary_large_image",
-    title: "BolChat — Multilingual AI Chatbots for Modern Businesses",
+    title: "BolChat — Instantly Scale Your Customer Support",
     description:
-      "Deploy context-aware AI chatbots in minutes. Supports 50+ languages and automates customer support at scale.",
+      "BolChat is an enterprise-grade AI support platform that instantly resolves customer inquiries in 50+ languages.",
     images: [`${SITE_URL}/og-image.png`],
-    creator: "@bolchat_ai", // ← update to your real Twitter/X handle
+    creator: "@bolchat_ai",
     site: "@bolchat_ai",
   },
 
@@ -137,7 +131,7 @@ export const metadata: Metadata = {
   applicationName: "BolChat",
   referrer: "origin-when-cross-origin",
   category: "technology",
-  classification: "AI SaaS",
+  classification: "Enterprise SaaS",
 
   /* ── Favicons (legacy meta for older browsers) ──────────────────────────── */
   other: {
@@ -158,7 +152,7 @@ export default function RootLayout({
         <JsonLd />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${plusJakarta.variable} antialiased`}
+        className={`${inter.variable} ${outfit.variable} antialiased`}
       >
         {children}
       </body>

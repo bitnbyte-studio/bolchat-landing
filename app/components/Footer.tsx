@@ -2,6 +2,7 @@
 
 import { BolchatLogo } from "./BolchatLogo";
 import { Container } from "./Container";
+import Link from "next/link";
 
 export function Footer() {
     return (
@@ -41,16 +42,16 @@ export function Footer() {
                         <h5 className="mb-6 font-bold text-slate-800">Platform</h5>
                         <ul className="space-y-4 text-sm font-medium text-slate-500">
                             <li className="transition-colors hover:text-rose-500">
-                                <a href="#product" id="f-link-product">Product Overview</a>
+                                <Link href="/features">Features Overview</Link>
                             </li>
                             <li className="transition-colors hover:text-rose-500">
-                                <a href="#integrations" id="f-link-integrations">Integrations</a>
+                                <Link href="/pricing">Pricing Plans</Link>
                             </li>
                             <li className="transition-colors hover:text-rose-500">
-                                <a href="#pricing" id="f-link-pricing">Pricing Plans</a>
+                                <Link href="/about">About Us</Link>
                             </li>
                             <li className="transition-colors hover:text-rose-500">
-                                <a href="#developers" id="f-link-api">API Docs</a>
+                                <Link href="/contact">Contact Sales</Link>
                             </li>
                         </ul>
                     </div>
@@ -59,16 +60,16 @@ export function Footer() {
                         <h5 className="mb-6 font-bold text-slate-800">Resources</h5>
                         <ul className="space-y-4 text-sm font-medium text-slate-500">
                             <li className="transition-colors hover:text-rose-500">
-                                <a href="#" id="f-link-blog">Blog</a>
+                                <Link href="/blog">Blog</Link>
                             </li>
                             <li className="transition-colors hover:text-rose-500">
-                                <a href="#" id="f-link-guide">Multilingual Guide</a>
+                                <a href="https://docs.bolchat.tech" target="_blank" rel="noopener noreferrer">Developer API</a>
                             </li>
                             <li className="transition-colors hover:text-rose-500">
-                                <a href="#" id="f-link-privacy">Privacy Policy</a>
+                                <Link href="/privacy">Privacy Policy</Link>
                             </li>
                             <li className="transition-colors hover:text-rose-500">
-                                <a href="#" id="f-link-terms">Terms of Service</a>
+                                <Link href="/terms">Terms of Service</Link>
                             </li>
                         </ul>
                     </div>
@@ -77,12 +78,12 @@ export function Footer() {
                 <div className="flex flex-col items-center justify-between gap-6 border-t border-slate-200/60 pt-8 text-sm font-medium text-slate-400 md:flex-row md:pt-12">
                     <p>© 2026 BolChat AI. All rights reserved.</p>
                     <div className="flex gap-8">
-                        {/* More links if required by the design */}
-                        <a href="#" className="hover:text-rose-500">Status Check</a>
-                        <a href="#" className="hover:text-rose-500">Security</a>
+                        <Link href="/contact" className="hover:text-rose-500">Support</Link>
+                        <a href="https://status.bolchat.tech" className="hover:text-rose-500">System Status</a>
                     </div>
                 </div>
             </Container>
         </footer>
     );
 }
+

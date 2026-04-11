@@ -1,9 +1,9 @@
-﻿import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/Navbar";
 import { HeroSection } from "./components/HeroSection";
 import { EcosystemSection } from "./components/EcosystemSection";
 import { FeaturesSection } from "./components/FeaturesSection";
 import { HowItWorksSection } from "./components/HowItWorksSection";
-import { WaitlistSection } from "./components/WaitlistSection";
+import { CTASection } from "./components/WaitlistSection";
 import { Footer } from "./components/Footer";
 
 export default function Home() {
@@ -20,8 +20,9 @@ export default function Home() {
       <FeaturesSection />
       <HowItWorksSection />
       <EcosystemSection />
-      <WaitlistSection />
+      <CTASection />
       <Footer />
     </div>
   );
 }
+
