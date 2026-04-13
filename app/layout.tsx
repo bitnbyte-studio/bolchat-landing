@@ -23,7 +23,7 @@ const SITE_URL = "https://bolchat.tech";
 export const metadata: Metadata = {
   /* ── Title ──────────────────────────────────────────────────────────────── */
   title: {
-    default: "BolChat — Instantly Scale Your Customer Support with Multilingual AI",
+    default: "BolChat - Instantly Scale Your Customer Support with Multilingual AI",
     template: "%s | BolChat",
   },
 
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "BolChat",
-    title: "BolChat — Instantly Scale Your Customer Support with Multilingual AI",
+    title: "BolChat - Instantly Scale Your Customer Support with Multilingual AI",
     description:
       "BolChat is an enterprise-grade AI support platform that instantly resolves customer inquiries in 50+ languages.",
     images: [
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
   /* ── Twitter / X Card ───────────────────────────────────────────────────── */
   twitter: {
     card: "summary_large_image",
-    title: "BolChat — Instantly Scale Your Customer Support",
+    title: "BolChat - Instantly Scale Your Customer Support",
     description:
       "BolChat is an enterprise-grade AI support platform that instantly resolves customer inquiries in 50+ languages.",
     images: [`${SITE_URL}/og-image.png`],
