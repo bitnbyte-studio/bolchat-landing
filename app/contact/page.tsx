@@ -10,10 +10,10 @@ export const metadata: Metadata = {
     description: "Get in touch with our team to see how BolChat can scale your customer support operations 10x.",
 };
 
-export default function ContactPage({
+export default async function ContactPage({
     searchParams,
 }: {
-    searchParams: { success?: string };
+    searchParams: Promise<{ success?: string }>;
 }) {
     async function submitLead(formData: FormData) {
         "use server";
@@ -35,7 +35,7 @@ export default function ContactPage({
 
         try {
             // Send Email to shubham@bolchat.tech via Web3Forms
-            if (WEB3FORMS_ACCESS_KEY && WEB3FORMS_ACCESS_KEY !== "YOUR_WEB3FORMS_ACCESS_KEY_HERE") {
+            if (WEB3FORMS_ACCESS_KEY) {
                 await fetch("https://api.web3forms.com/submit", {
                     method: "POST",
                     headers: { "Content-Type": "application/json", Accept: "application/json" },
@@ -56,7 +56,8 @@ export default function ContactPage({
         redirect("/contact?success=true");
     }
 
-    const isSuccess = searchParams.success === "true";
+    const resolvedParams = await searchParams;
+    const isSuccess = resolvedParams.success === "true";
 
     return (
         <div className="min-h-screen bg-[#fafafa]">
