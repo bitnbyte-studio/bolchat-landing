@@ -63,6 +63,9 @@ export function Footer() {
                                 <Link href="/blog">Blog</Link>
                             </li>
                             <li className="transition-colors hover:text-rose-500">
+                                <Link href="/docs">Documentation</Link>
+                            </li>
+                            <li className="transition-colors hover:text-rose-500">
                                 <a href="https://docs.bolchat.tech" target="_blank" rel="noopener noreferrer">Developer API</a>
                             </li>
                             <li className="transition-colors hover:text-rose-500">

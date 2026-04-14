@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { JsonLd } from "./components/JsonLd";
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -155,6 +156,15 @@ export default function RootLayout({
         className={`${inter.variable} ${outfit.variable} antialiased`}
       >
         {children}
+
+
+        {/* <Script
+          src="http://127.0.0.1:8000/static/widget.js"
+          data-key="bc_live_rSSYbfZj.vsXPcrAHHMnqhowrrdZtFkh8hTnFWPqa"
+          data-agent="a90f62b5-5449-4677-a409-b150ff4ed89a"
+          data-api-url="http://127.0.0.1:8000"
+          strategy="afterInteractive"
+        /> */}
       </body>
     </html>
   );
