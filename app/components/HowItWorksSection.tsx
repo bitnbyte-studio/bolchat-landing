@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Container } from "./Container";
 import { Database, Zap, Code, ChevronRight } from "lucide-react";
 
@@ -43,7 +44,7 @@ export function HowItWorksSection() {
                 <div className="relative">
                     {/* Connecting lines for desktop */}
                     <div className="absolute top-1/2 left-0 w-full h-0.5 bg-slate-100 -translate-y-1/2 z-0 hidden md:block" />
-                    
+
                     {/* Connecting lines for mobile (vertical) */}
                     <div className="absolute top-0 left-1/2 w-0.5 h-full bg-slate-100 -translate-x-1/2 z-0 block md:hidden" />
 
@@ -63,9 +64,9 @@ export function HowItWorksSection() {
                 </div>
 
                 <div className="mt-16 flex justify-center">
-                    <div className="inline-flex items-center gap-2 text-rose-600 font-bold hover:gap-3 transition-all cursor-pointer">
+                    <Link href="/docs" className="inline-flex items-center gap-2 text-rose-600 font-bold hover:gap-3 transition-all cursor-pointer">
                         See detailed platform guide <ChevronRight className="h-4 w-4" />
-                    </div>
+                    </Link>
                 </div>
             </Container>
         </section>

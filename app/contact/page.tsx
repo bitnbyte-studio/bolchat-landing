@@ -17,15 +17,15 @@ export default async function ContactPage({
 }) {
     async function submitLead(formData: FormData) {
         "use server";
-        
+
         // =========================================================================
         // HOW TO SET UP FREE EMAILS:
         // 1. Go to https://web3forms.com/
         // 2. Enter shubham@bolchat.tech to instantly generate an access key.
         // 3. Paste that access key here. It's 100% free and requires no account.
         // =========================================================================
-        const WEB3FORMS_ACCESS_KEY = "d26f0cc5-1e1c-4e3d-9202-4fe5ebd0a5ab"; 
-        
+        const WEB3FORMS_ACCESS_KEY = "d26f0cc5-1e1c-4e3d-9202-4fe5ebd0a5ab";
+
         const payload = {
             name: formData.get("name") as string,
             email: formData.get("email") as string,
@@ -47,7 +47,7 @@ export default async function ContactPage({
                     }),
                 });
             }
-            
+
         } catch (e) {
             console.error("Error submitting lead:", e);
             return;
@@ -61,25 +61,25 @@ export default async function ContactPage({
 
     return (
         <div className="min-h-screen bg-[#fafafa]">
-            <BreadcrumbJsonLd 
+            <BreadcrumbJsonLd
                 items={[
                     { name: "Home", item: "/" },
                     { name: "Contact", item: "/contact" }
-                ]} 
+                ]}
             />
             <Navbar />
-            
+
             <main className="pt-28 pb-16 md:pt-40 md:pb-32">
                 <div className="max-w-6xl mx-auto px-5 sm:px-6">
                     <div className="grid lg:grid-cols-[1fr_500px] gap-10 sm:gap-16 lg:gap-24 items-start">
-                        
+
                         {/* ════════ LEFT: COPY & TRUST SIGNALS ════════ */}
                         <div className="pt-2 md:pt-4">
                             <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] md:leading-[1.05] mb-5 sm:mb-8">
-                                Let's optimize your <br className="hidden lg:block"/>
+                                Let's optimize your <br className="hidden lg:block" />
                                 <span className="text-rose-500">support architecture.</span>
                             </h1>
-                            
+
                             <p className="text-[15px] sm:text-lg md:text-xl text-slate-600 font-medium leading-relaxed mb-8 sm:mb-12 max-w-xl">
                                 Whether you're looking to eliminate support backlog, capture more leads, or deploy multilingual agents—we can help. Drop your details below and our team will get back to you within hours.
                             </p>
@@ -115,25 +115,25 @@ export default async function ContactPage({
                             ) : (
                                 <>
                                     <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6 sm:mb-8 tracking-tight">Technical Evaluation</h2>
-                                    
+
                                     <form action={submitLead} className="space-y-5 sm:space-y-6">
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                                             <div className="space-y-1.5 sm:space-y-2">
                                                 <label htmlFor="name" className="text-[12px] sm:text-[13px] font-bold text-slate-900 uppercase tracking-wider">Full Name *</label>
-                                                <input 
-                                                    type="text" 
-                                                    name="name" 
-                                                    required 
+                                                <input
+                                                    type="text"
+                                                    name="name"
+                                                    required
                                                     className="w-full bg-slate-50 border-b-2 border-slate-200 px-3 sm:px-4 py-2.5 sm:py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:bg-white focus:border-rose-500 focus:ring-0 text-sm sm:text-base"
                                                     placeholder="John Doe"
                                                 />
                                             </div>
                                             <div className="space-y-1.5 sm:space-y-2">
                                                 <label htmlFor="company" className="text-[12px] sm:text-[13px] font-bold text-slate-900 uppercase tracking-wider">Company *</label>
-                                                <input 
-                                                    type="text" 
-                                                    name="company" 
-                                                    required 
+                                                <input
+                                                    type="text"
+                                                    name="company"
+                                                    required
                                                     className="w-full bg-slate-50 border-b-2 border-slate-200 px-3 sm:px-4 py-2.5 sm:py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:bg-white focus:border-rose-500 focus:ring-0 text-sm sm:text-base"
                                                     placeholder="Acme Inc."
                                                 />
@@ -142,10 +142,10 @@ export default async function ContactPage({
 
                                         <div className="space-y-1.5 sm:space-y-2">
                                             <label htmlFor="email" className="text-[12px] sm:text-[13px] font-bold text-slate-900 uppercase tracking-wider">Work Email *</label>
-                                            <input 
-                                                type="email" 
-                                                name="email" 
-                                                required 
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                required
                                                 className="w-full bg-slate-50 border-b-2 border-slate-200 px-3 sm:px-4 py-2.5 sm:py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:bg-white focus:border-rose-500 focus:ring-0 text-sm sm:text-base"
                                                 placeholder="john@acme.com"
                                             />
@@ -155,22 +155,22 @@ export default async function ContactPage({
                                             <label htmlFor="requirements" className="text-[12px] sm:text-[13px] font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
                                                 Project Details <MessageSquare className="w-3 h-3 text-slate-400" />
                                             </label>
-                                            <textarea 
-                                                name="requirements" 
-                                                required 
+                                            <textarea
+                                                name="requirements"
+                                                required
                                                 rows={3}
                                                 className="w-full bg-slate-50 border-b-2 border-slate-200 px-3 sm:px-4 py-2.5 sm:py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:bg-white focus:border-rose-500 focus:ring-0 resize-none text-sm sm:text-base"
                                                 placeholder="What is your current support volume? Are you looking for lead generation or strict support..."
                                             />
                                         </div>
 
-                                        <button 
-                                            type="submit" 
-                                            className="w-full bg-slate-900 py-3.5 sm:py-4 font-bold text-white text-[14px] sm:text-[15px] tracking-wide transition-all hover:bg-slate-800 active:scale-[0.98] flex items-center justify-center gap-2"
+                                        <button
+                                            type="submit"
+                                            className="cursor-pointer w-full bg-slate-900 py-3.5 sm:py-4 font-bold text-white text-[14px] sm:text-[15px] tracking-wide transition-all hover:bg-slate-800 active:scale-[0.98] flex items-center justify-center gap-2"
                                         >
                                             Submit Overview
                                         </button>
-                                        
+
                                         <p className="text-center text-[11px] font-medium text-slate-400 mt-4 leading-relaxed">
                                             All data is encrypted. We do not sell your data.
                                         </p>
