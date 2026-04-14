@@ -1,12 +1,12 @@
-import { Container } from "../components/Container";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { Mail, MapPin, CheckCircle2 } from "lucide-react";
+import { Mail, Building2, MessageSquare, CheckCircle2 } from "lucide-react";
 import { redirect } from "next/navigation";
 import { BreadcrumbJsonLd } from "../components/BreadcrumbJsonLd";
+import { Metadata } from "next";
 
-export const metadata = {
-    title: "Contact Sales",
+export const metadata: Metadata = {
+    title: "Contact Sales | BolChat",
     description: "Get in touch with our team to see how BolChat can scale your customer support operations 10x.",
 };
 
@@ -18,6 +18,14 @@ export default function ContactPage({
     async function submitLead(formData: FormData) {
         "use server";
         
+        // =========================================================================
+        // HOW TO SET UP FREE EMAILS:
+        // 1. Go to https://web3forms.com/
+        // 2. Enter shubham@bolchat.tech to instantly generate an access key.
+        // 3. Paste that access key here. It's 100% free and requires no account.
+        // =========================================================================
+        const WEB3FORMS_ACCESS_KEY = "d26f0cc5-1e1c-4e3d-9202-4fe5ebd0a5ab"; 
+        
         const payload = {
             name: formData.get("name") as string,
             email: formData.get("email") as string,
@@ -26,18 +34,20 @@ export default function ContactPage({
         };
 
         try {
-            const res = await fetch("http://localhost:8000/api/v1/public/lead", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(payload),
-            });
-
-            if (!res.ok) {
-                console.error("Failed to submit lead");
-                return;
+            // Send Email to shubham@bolchat.tech via Web3Forms
+            if (WEB3FORMS_ACCESS_KEY && WEB3FORMS_ACCESS_KEY !== "YOUR_WEB3FORMS_ACCESS_KEY_HERE") {
+                await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json", Accept: "application/json" },
+                    body: JSON.stringify({
+                        access_key: WEB3FORMS_ACCESS_KEY,
+                        subject: `New Lead: ${payload.name} from ${payload.company}`,
+                        from_name: "BolChat Website",
+                        ...payload
+                    }),
+                });
             }
+            
         } catch (e) {
             console.error("Error submitting lead:", e);
             return;
@@ -49,7 +59,7 @@ export default function ContactPage({
     const isSuccess = searchParams.success === "true";
 
     return (
-        <div className="min-h-screen bg-[radial-gradient(circle_at_0%_0%,#ffffff_0%,#ffffff_40%,#fff5f8_60%,#ffeef3_100%)]">
+        <div className="min-h-screen bg-[#fafafa]">
             <BreadcrumbJsonLd 
                 items={[
                     { name: "Home", item: "/" },
@@ -58,102 +68,110 @@ export default function ContactPage({
             />
             <Navbar />
             
-            <main className="py-24 md:py-32">
-                <Container maxWidth="max-w-7xl">
-                    <div className="grid gap-16 md:grid-cols-2">
+            <main className="pt-28 pb-16 md:pt-40 md:pb-32">
+                <div className="max-w-6xl mx-auto px-5 sm:px-6">
+                    <div className="grid lg:grid-cols-[1fr_500px] gap-10 sm:gap-16 lg:gap-24 items-start">
                         
-                        {/* Left Side: Trust Signals */}
-                        <div>
-                            <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
-                                Let's build your AI support strategy.
+                        {/* ════════ LEFT: COPY & TRUST SIGNALS ════════ */}
+                        <div className="pt-2 md:pt-4">
+                            <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] md:leading-[1.05] mb-5 sm:mb-8">
+                                Let's optimize your <br className="hidden lg:block"/>
+                                <span className="text-rose-500">support architecture.</span>
                             </h1>
-                            <p className="text-lg text-slate-600 mb-12 max-w-md leading-relaxed">
-                                Our team of AI experts is ready to help you eliminate support backlog and increase customer satisfaction. Fill out the form, and we'll reach out within 24 hours.
+                            
+                            <p className="text-[15px] sm:text-lg md:text-xl text-slate-600 font-medium leading-relaxed mb-8 sm:mb-12 max-w-xl">
+                                Whether you're looking to eliminate support backlog, capture more leads, or deploy multilingual agents—we can help. Drop your details below and our team will get back to you within hours.
                             </p>
 
-                            <div className="space-y-8">
-                                <div className="flex items-start gap-4">
-                                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rose-100 text-rose-600">
-                                        <Mail className="h-5 w-5" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-slate-900">Email Us</h3>
-                                        <p className="text-slate-500">hello@bolchat.tech</p>
-                                    </div>
+                            <div className="mt-8">
+                                <div className="border-l-2 border-slate-200 pl-5">
+                                    <h3 className="text-sm font-bold text-slate-900 uppercase tracking-widest mb-1.5 flex items-center gap-2">
+                                        <Mail className="w-4 h-4 text-rose-500" /> Direct Email
+                                    </h3>
+                                    <a href="mailto:hello@bolchat.tech" className="text-slate-600 hover:text-rose-500 font-medium transition-colors">
+                                        hello@bolchat.tech
+                                    </a>
                                 </div>
                             </div>
+
                         </div>
 
-                        {/* Right Side: Form */}
-                        <div className="rounded-[2.5rem] bg-white p-8 md:p-12 shadow-[0_20px_60px_rgba(255,107,157,0.1)] border border-slate-100">
+                        {/* ════════ RIGHT: FORM MODULE ════════ */}
+                        <div className="bg-white border border-slate-200 shadow-xl p-6 sm:p-8 md:p-10 relative mt-4 sm:mt-0">
+                            {/* Decorative accent top border */}
+                            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-500 to-pink-500" />
+
                             {isSuccess ? (
-                                <div className="flex h-full flex-col items-center justify-center text-center py-12">
-                                    <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-green-600">
-                                        <CheckCircle2 className="h-10 w-10" />
+                                <div className="flex flex-col items-center justify-center text-center py-12">
+                                    <div className="mb-5 flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-xl bg-emerald-50 text-emerald-500">
+                                        <CheckCircle2 className="h-7 w-7 sm:h-8 sm:w-8" strokeWidth={2.5} />
                                     </div>
-                                    <h2 className="text-2xl font-bold text-slate-900 mb-4">Request Submitted</h2>
-                                    <p className="text-slate-600 mb-8 max-w-sm">
-                                        Thanks for reaching out! We have received your request and our team will contact you within 24 hours.
+                                    <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2 tracking-tight">Request Received</h2>
+                                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+                                        Thank you. We'll be in touch shortly to discuss how BolChat can scale your operations.
                                     </p>
                                 </div>
                             ) : (
                                 <>
-                                    <h2 className="text-2xl font-bold text-slate-900 mb-8">Request a Demo</h2>
+                                    <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6 sm:mb-8 tracking-tight">Technical Evaluation</h2>
                                     
-                                    <form action={submitLead} className="space-y-5">
-                                        <div className="grid grid-cols-2 gap-5">
-                                            <div className="space-y-2">
-                                                <label htmlFor="name" className="text-sm font-semibold text-slate-700">Full Name</label>
+                                    <form action={submitLead} className="space-y-5 sm:space-y-6">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+                                            <div className="space-y-1.5 sm:space-y-2">
+                                                <label htmlFor="name" className="text-[12px] sm:text-[13px] font-bold text-slate-900 uppercase tracking-wider">Full Name *</label>
                                                 <input 
                                                     type="text" 
                                                     name="name" 
                                                     required 
-                                                    className="w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20"
+                                                    className="w-full bg-slate-50 border-b-2 border-slate-200 px-3 sm:px-4 py-2.5 sm:py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:bg-white focus:border-rose-500 focus:ring-0 text-sm sm:text-base"
                                                     placeholder="John Doe"
                                                 />
                                             </div>
-                                            <div className="space-y-2">
-                                                <label htmlFor="company" className="text-sm font-semibold text-slate-700">Company</label>
+                                            <div className="space-y-1.5 sm:space-y-2">
+                                                <label htmlFor="company" className="text-[12px] sm:text-[13px] font-bold text-slate-900 uppercase tracking-wider">Company *</label>
                                                 <input 
                                                     type="text" 
                                                     name="company" 
                                                     required 
-                                                    className="w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20"
+                                                    className="w-full bg-slate-50 border-b-2 border-slate-200 px-3 sm:px-4 py-2.5 sm:py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:bg-white focus:border-rose-500 focus:ring-0 text-sm sm:text-base"
                                                     placeholder="Acme Inc."
                                                 />
                                             </div>
                                         </div>
 
-                                        <div className="space-y-2">
-                                            <label htmlFor="email" className="text-sm font-semibold text-slate-700">Work Email</label>
+                                        <div className="space-y-1.5 sm:space-y-2">
+                                            <label htmlFor="email" className="text-[12px] sm:text-[13px] font-bold text-slate-900 uppercase tracking-wider">Work Email *</label>
                                             <input 
                                                 type="email" 
                                                 name="email" 
                                                 required 
-                                                className="w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20"
+                                                className="w-full bg-slate-50 border-b-2 border-slate-200 px-3 sm:px-4 py-2.5 sm:py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:bg-white focus:border-rose-500 focus:ring-0 text-sm sm:text-base"
                                                 placeholder="john@acme.com"
                                             />
                                         </div>
 
-                                        <div className="space-y-2">
-                                            <label htmlFor="requirements" className="text-sm font-semibold text-slate-700">How can we help?</label>
+                                        <div className="space-y-1.5 sm:space-y-2">
+                                            <label htmlFor="requirements" className="text-[12px] sm:text-[13px] font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
+                                                Project Details <MessageSquare className="w-3 h-3 text-slate-400" />
+                                            </label>
                                             <textarea 
                                                 name="requirements" 
                                                 required 
-                                                rows={4}
-                                                className="w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20 resize-none"
-                                                placeholder="Tell us about your support volume and main pain points..."
+                                                rows={3}
+                                                className="w-full bg-slate-50 border-b-2 border-slate-200 px-3 sm:px-4 py-2.5 sm:py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:bg-white focus:border-rose-500 focus:ring-0 resize-none text-sm sm:text-base"
+                                                placeholder="What is your current support volume? Are you looking for lead generation or strict support..."
                                             />
                                         </div>
 
                                         <button 
                                             type="submit" 
-                                            className="w-full rounded-xl bg-slate-900 py-4 font-bold text-white transition-all hover:bg-slate-800 active:scale-[0.98]"
+                                            className="w-full bg-slate-900 py-3.5 sm:py-4 font-bold text-white text-[14px] sm:text-[15px] tracking-wide transition-all hover:bg-slate-800 active:scale-[0.98] flex items-center justify-center gap-2"
                                         >
-                                            Submit Request
+                                            Submit Overview
                                         </button>
-                                        <p className="text-center text-xs text-slate-500 mt-4">
-                                            By submitting, you agree to our Privacy Policy and Terms of Service.
+                                        
+                                        <p className="text-center text-[11px] font-medium text-slate-400 mt-4 leading-relaxed">
+                                            All data is encrypted. We do not sell your data.
                                         </p>
                                     </form>
                                 </>
@@ -161,11 +179,10 @@ export default function ContactPage({
                         </div>
 
                     </div>
-                </Container>
+                </div>
             </main>
 
             <Footer />
         </div>
     );
 }
-

@@ -352,7 +352,7 @@ export function DocsContent() {
       </div>
 
       {/* ── Mobile TOC Toggle ── */}
-      <div className="lg:hidden sticky top-[64px] z-40 bg-white/80 backdrop-blur-xl border-b border-slate-100">
+      <div className="lg:hidden sticky top-0 z-40 bg-white/80 backdrop-blur-xl border-b border-slate-100">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="flex items-center justify-between w-full px-5 py-3 text-sm font-bold text-slate-700"
@@ -374,7 +374,7 @@ export function DocsContent() {
 
           {/* ── Desktop Sidebar ── */}
           <aside className="hidden lg:block">
-            <nav className="sticky top-24 max-h-[calc(100vh-120px)] overflow-y-auto py-6 pr-2 custom-scrollbar">
+            <nav className="sticky top-4 max-h-[calc(100vh-32px)] overflow-y-auto py-6 pr-2 custom-scrollbar">
               <h3 className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-3 px-3">On this page</h3>
               <SidebarTOC activeId={activeId} onNavigate={handleNav} />
               <div className="mt-6 p-4 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 text-white">

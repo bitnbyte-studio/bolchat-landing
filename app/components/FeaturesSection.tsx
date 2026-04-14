@@ -13,84 +13,73 @@ import {
 const features = [
     {
         title: "Agent Personas",
-        description: "Define custom personas, instructions, and behavior. Train your agents on your specific business logic and brand voice.",
+        description: "Strict personas, custom logic, and perfect brand voice execution.",
         icon: Settings2,
-        colSpan: "md:col-span-2",
-        bgColor: "bg-blue-50/50",
-        iconColor: "text-blue-500",
-        iconBg: "bg-blue-100"
+        colorBg: "bg-blue-100",
+        colorIcon: "text-blue-600"
     },
     {
-        title: "Agent Customization",
-        description: "Full control over your AI Agent's interface. Match your brand colors, icons, and position perfectly.",
+        title: "Total Styling",
+        description: "Full control over widget UI, colors, typography, and placement.",
         icon: Layout,
-        colSpan: "md:col-span-1",
-        bgColor: "bg-indigo-50/50",
-        iconColor: "text-indigo-500",
-        iconBg: "bg-indigo-100"
+        colorBg: "bg-indigo-100",
+        colorIcon: "text-indigo-600"
     },
     {
-        title: "Real-time Analytics",
-        description: "Track agent performance, containment rates, and support volume trends in one powerful dashboard.",
+        title: "Live Analytics",
+        description: "Track performance, containment trends, and volume live.",
         icon: BarChart3,
-        colSpan: "md:col-span-1",
-        bgColor: "bg-rose-50/50",
-        iconColor: "text-rose-500",
-        iconBg: "bg-rose-100"
+        colorBg: "bg-rose-100",
+        colorIcon: "text-rose-600"
     },
     {
-        title: "Autonomous Monitoring",
-        description: "View live agent transcripts and historical conversations. Gain full oversight over every AI-customer interaction.",
+        title: "Audit Logging",
+        description: "Every transcript saved. Gain total oversight over conversations.",
         icon: Eye,
-        colSpan: "md:col-span-2",
-        bgColor: "bg-emerald-50/50",
-        iconColor: "text-emerald-500",
-        iconBg: "bg-emerald-100"
+        colorBg: "bg-emerald-100",
+        colorIcon: "text-emerald-600"
     },
     {
-        title: "Enterprise Security",
-        description: "SOC2 compliant. Your business data is encrypted and never used to train public models. Built for large-scale security.",
+        title: "Enterprise TLS",
+        description: "Your data is encrypted and never trains public AI models.",
         icon: ShieldCheck,
-        colSpan: "md:col-span-2",
-        bgColor: "bg-slate-50/50",
-        iconColor: "text-slate-700",
-        iconBg: "bg-slate-200"
+        colorBg: "bg-slate-100",
+        colorIcon: "text-slate-700"
     },
     {
-        title: "Lead Capture",
-        description: "Automatically identify and capture qualified leads during conversations. Sync directly with your CRM of choice.",
+        title: "Auto-Leads",
+        description: "Passively capture emails right mid-conversation directly to CRM.",
         icon: UserPlus,
-        colSpan: "md:col-span-1",
-        bgColor: "bg-amber-50/50",
-        iconColor: "text-amber-500",
-        iconBg: "bg-amber-100"
+        colorBg: "bg-amber-100",
+        colorIcon: "text-amber-600"
     },
 ];
 
 export function FeaturesSection() {
     return (
-        <section className="relative py-16 md:py-24 bg-white/40">
-            <Container maxWidth="max-w-5xl">
-                <div className="mx-auto mb-12 max-w-2xl text-center">
-                    <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
-                        Everything you need to launch
+        <section className="relative py-12 md:py-20 bg-white">
+            <Container maxWidth="max-w-6xl">
+                <div className="mb-10 md:mb-16 max-w-2xl text-center md:text-left mx-auto md:mx-0">
+                    <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-5xl leading-tight">
+                        Everything you <br className="hidden sm:block"/>
+                        need to <span className="text-rose-500">launch.</span>
                     </h2>
-                    <p className="text-lg text-slate-600">
-                        BolChat isn't just a chatbot; it's a complete support infrastructure designed to give you full control over your customer experience.
+                    <p className="text-[15px] sm:text-lg text-slate-600 font-medium leading-relaxed px-4 md:px-0">
+                        BolChat isn't just a toy. It's a highly strict infrastructure to give you absolute control over your global support.
                     </p>
                 </div>
 
-                <div className="grid gap-4 md:grid-cols-3">
+                <div className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
                     {features.map((item, index) => (
                         <div
                             key={index}
-                            className={`group relative overflow-hidden rounded-3xl border border-slate-200 ${item.bgColor} p-8 transition-all hover:shadow-lg hover:-translate-y-1 ${item.colSpan}`}
+                            className="group relative flex flex-col p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-slate-100 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
                         >
-                            <div className={`mb-6 flex h-12 w-12 items-center justify-center rounded-2xl ${item.iconBg} ${item.iconColor}`}>
-                                <item.icon strokeWidth={2.5} className="h-6 w-6" />
+                            <div className={`mb-3 sm:mb-5 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-[0.8rem] sm:rounded-xl ${item.colorBg} ${item.colorIcon}`}>
+                                <item.icon strokeWidth={2.5} className="h-5 w-5 sm:h-6 sm:w-6" />
                             </div>
-                            <h3 className="mb-2 text-xl font-bold text-slate-900">{item.title}</h3>
-                            <p className="text-slate-600 leading-relaxed font-medium">{item.description}</p>
+                            <h3 className="mb-1 sm:mb-2 text-[15px] sm:text-lg font-bold text-slate-900 tracking-tight leading-tight">{item.title}</h3>
+                            <p className="text-slate-500 text-[13px] sm:text-[15px] leading-snug sm:leading-relaxed font-medium">{item.description}</p>
                         </div>
                     ))}
                 </div>
