@@ -24,23 +24,26 @@ const SITE_URL = "https://bolchat.tech";
 export const metadata: Metadata = {
   /* ── Title ──────────────────────────────────────────────────────────────── */
   title: {
-    default: "BolChat - Instantly Scale Your Customer Support with Multilingual AI",
+    default: "BolChat — Multilingual AI Agent for Website Customer Support | 50+ Languages",
     template: "%s | BolChat",
   },
 
   /* ── Core meta ──────────────────────────────────────────────────────────── */
   description:
-    "BolChat is an enterprise-grade AI support platform that instantly resolves customer inquiries in 50+ languages. Scale your support operations 10x without adding headcount.",
+    "Deploy autonomous AI agents on your website that resolve customer queries in 50+ languages, capture leads, and escalate to humans — 24/7. No extra headcount needed. Start free.",
   keywords: [
-    "AI customer support",
-    "multilingual chatbot",
-    "customer support automation",
-    "conversational AI",
+    "multilingual AI agent for website",
+    "AI customer support automation",
+    "AI agent for website",
+    "multilingual customer support chatbot",
+    "customer support automation software",
+    "conversational AI platform",
     "BolChat",
-    "support ticketing automation",
-    "AI agents",
-    "enterprise customer service",
-    "customer experience AI",
+    "AI chatbot for website",
+    "autonomous AI customer service",
+    "AI support agent 50 languages",
+    "lead capture chatbot",
+    "enterprise AI customer service platform",
   ],
   authors: [{ name: "BolChat", url: SITE_URL }],
   creator: "BolChat Inc.",
@@ -72,9 +75,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "BolChat",
-    title: "BolChat - Instantly Scale Your Customer Support with Multilingual AI",
+    title: "BolChat — Multilingual AI Agent for Website Customer Support | 50+ Languages",
     description:
-      "BolChat is an enterprise-grade AI support platform that instantly resolves customer inquiries in 50+ languages.",
+      "Deploy autonomous AI agents on your website that resolve customer queries in 50+ languages, capture leads, and escalate to humans — 24/7. No extra headcount needed.",
     images: [
       {
         url: `${SITE_URL}/og-image.png`,
@@ -89,9 +92,9 @@ export const metadata: Metadata = {
   /* ── Twitter / X Card ───────────────────────────────────────────────────── */
   twitter: {
     card: "summary_large_image",
-    title: "BolChat - Instantly Scale Your Customer Support",
+    title: "BolChat — Multilingual AI Agent for Website Customer Support",
     description:
-      "BolChat is an enterprise-grade AI support platform that instantly resolves customer inquiries in 50+ languages.",
+      "Deploy autonomous AI agents that resolve customer queries in 50+ languages, capture leads, and escalate to humans — 24/7.",
     images: [`${SITE_URL}/og-image.png`],
     creator: "@bolchat_ai",
     site: "@bolchat_ai",
@@ -123,10 +126,11 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 
   /* ── Google Search Console ownership verification ───────────────────────── */
-  /* Paste the "content" value from your GSC HTML-tag verification here:       */
-  // verification: {
-  //   google: "REPLACE_WITH_YOUR_GSC_VERIFICATION_CODE",
-  // },
+  /* TODO: Paste the "content" value from your GSC HTML-tag verification here: */
+  /* Steps: GSC → Settings → Ownership verification → HTML tag → copy value   */
+  verification: {
+    google: "REPLACE_WITH_YOUR_GSC_VERIFICATION_CODE", // <-- paste your code here
+  },
 
   /* ── App metadata (mobile / PWA feel) ──────────────────────────────────── */
   applicationName: "BolChat",
@@ -150,6 +154,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Preconnect hints — improve LCP by warming up Google Fonts connections */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <JsonLd />
       </head>
       <body

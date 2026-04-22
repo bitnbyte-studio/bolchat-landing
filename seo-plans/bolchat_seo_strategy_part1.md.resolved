@@ -1,0 +1,508 @@
+# BolChat — Full SEO & Growth Strategy (Parts 1–5)
+
+> **Audit date:** April 2026 | Domain: bolchat.tech | Stack: Next.js (App Router)
+
+---
+
+## PART 1 — Positioning Strategy
+
+### What Category BolChat Should Own
+
+**Own: "AI Agent for Customer Support on Websites"**
+
+This is a newly forming, high-value category. Competitors like Intercom and Zendesk are retrofitting AI onto legacy products. BolChat has the chance to be the *category-defining* AI-native support agent — not just a chatbot upgrade.
+
+### Position As: **Hybrid — AI Agents + Multilingual Support Platform**
+
+| Label | Problem |
+|---|---|
+| "AI Chatbot" | Sounds like Tidio/Crisp. Commodity. Low trust in B2B. |
+| "AI Customer Support" | Broad. Hard to win on. Zendesk owns this. |
+| "Conversational AI" | Too technical. Enterprise only vibes. |
+| ✅ "Multilingual AI Agent for Websites" | Specific. Owned. Defensible. Searchable. |
+
+**Category tagline to own:**
+> *"The AI Agent Layer for Global Websites"*
+
+BolChat's unfair advantage is **multilingual + autonomous resolution + lead capture in one widget**. No major competitor does all three well. That's the wedge.
+
+### Market Angle to Dominate
+
+1. **Multilingual first** — 50+ languages is a massive differentiator. Most tools are English-first. Target global-first companies: edtech, e-commerce, SaaS with international traffic.
+2. **Resolution rate, not just chat** — Position against headcount cost. "Your AI that resolves, not just replies."
+3. **SMB-to-Enterprise path** — Start with startups and agencies (lower competition), then move upmarket. Don't try to win Enterprise Day 1.
+
+### Sound Premium While Staying Searchable
+
+- In **headlines**: use brand language ("Autonomous AI Agent", "Resolve, Don't Reply")
+- In **body copy + subheads**: use exact-match keywords ("multilingual customer support chatbot", "AI agent for website", "automated customer service software")
+- In **meta + H1**: always keyword-first, then brand
+
+**The formula:** Brand voice in headlines. SEO keywords in subheads, body, meta.
+
+---
+
+## PART 2 — Homepage Rewrite
+
+### Hero Section
+
+**H1 (SEO-optimized + premium):**
+```
+Your Website's AI Support Agent.
+Speaks Every Language. Resolves Every Query.
+```
+
+**Subheadline:**
+```
+BolChat deploys autonomous AI agents on your website that resolve customer 
+queries, capture leads, and escalate intelligently — in 50+ languages, 24/7. 
+No extra headcount required.
+```
+
+**Primary CTA:** `Book a Free Demo →`
+**Secondary CTA:** `See How It Works`
+
+---
+
+### Trust Bar (below hero)
+
+```
+Trusted by 500+ startups and growing businesses worldwide
+
+[Logos or categories: E-commerce · SaaS · Edtech · Healthcare · Real Estate]
+
+★★★★★  "Cut our support tickets by 68% in week one." — Founder, YC-backed startup
+```
+
+---
+
+### Features Section
+
+**Section headline:**
+```
+One platform. Every support scenario covered.
+```
+
+**Feature cards (rewritten for SEO + clarity):**
+
+| Feature | New Title | New Description |
+|---|---|---|
+| Agent Personas | **Custom AI Agent Personas** | Train your agent with your brand tone, FAQs, and business rules. It responds like your best support rep — every single time. |
+| Total Styling | **Fully Branded Chat Widget** | Match colors, fonts, placement, and behavior to your brand. Embed in minutes with a single script tag. |
+| Live Analytics | **Real-Time Support Analytics** | Track resolution rates, conversation volume, and containment trends live. Know exactly where your AI wins — and where humans help. |
+| Audit Logging | **Complete Conversation Audit Logs** | Every conversation stored, searchable, and exportable. Full oversight for compliance and quality control. |
+| Enterprise TLS | **Enterprise-Grade Security** | AES-256 encryption in transit and at rest. Your knowledge base stays private. Your data never trains public AI models. |
+| Auto-Leads | **Automated Lead Capture** | BolChat captures visitor emails and intent signals mid-conversation and syncs directly to your CRM — without a single form. |
+
+---
+
+### Why BolChat Section
+
+**Headline:** `Why teams switch to BolChat`
+
+```
+✅ Resolves queries autonomously — not just deflects them
+✅ Supports 50+ languages natively — not via translation layers
+✅ Captures leads without interrupting the conversation
+✅ RAG-powered private knowledge base — no hallucinations
+✅ Human handoff when it matters — with full context passed
+✅ Deploys in under 30 minutes — no engineering required
+```
+
+---
+
+### How It Works Section
+
+**Headline:** `From setup to first resolved query in under 30 minutes`
+
+**Steps:**
+1. **Connect your knowledge base** — Upload docs, FAQs, or scrape your site. BolChat learns your business.
+2. **Configure your AI agent** — Set persona, tone, escalation rules, and languages in the dashboard.
+3. **Embed the widget** — One `<script>` tag. Works on any website, CMS, or web app.
+4. **Watch it resolve** — Your agent handles queries autonomously. You review analytics, not tickets.
+
+---
+
+### Integrations Section
+
+**Headline:** `Plugs into the tools your team already uses`
+
+```
+HubSpot · Salesforce · Notion · Slack · Zapier · Shopify · WordPress · 
+Webflow · Framer · Google Analytics · WhatsApp · Intercom API
+```
+
+*"Native integrations and Zapier webhooks. Connect in minutes."*
+
+---
+
+### FAQ Section
+
+**Headline:** `Frequently asked questions`
+
+```
+Q: Is BolChat just another chatbot?
+A: No. BolChat deploys autonomous AI agents that resolve queries end-to-end 
+   using your knowledge base. It doesn't just collect messages — it answers them.
+
+Q: How does the 50+ language support work?
+A: BolChat detects visitor language automatically and responds natively. 
+   No translation plugins required. Works across Hindi, Spanish, French, Arabic, 
+   Mandarin, and 45+ more languages.
+
+Q: Is my data safe?
+A: Yes. All data is encrypted with AES-256. Your private knowledge base is never 
+   shared with or used to train any public AI model.
+
+Q: Can I hand off conversations to a human agent?
+A: Absolutely. Set custom escalation triggers — BolChat passes full conversation 
+   context to your human team via email, Slack, or your CRM.
+
+Q: How long does setup take?
+A: Most teams are live in under 30 minutes. No engineering resources required.
+
+Q: Do you offer a free trial?
+A: Yes. Start with our free plan or book a personalized demo to see BolChat 
+   configured for your specific use case.
+```
+
+---
+
+### Final CTA Section
+
+**Headline:** `Start resolving. Stop replying.`
+
+**Body:**
+```
+Join 500+ businesses that use BolChat to automate customer support, capture leads, 
+and scale globally — without scaling their team.
+```
+
+**CTA 1:** `Book a Free Demo →`
+**CTA 2:** `Start Free — No Credit Card Required`
+
+---
+
+## PART 3 — SEO Architecture
+
+### Priority Page Map
+
+```
+bolchat.tech/                          ← Homepage [Priority 1.0]
+bolchat.tech/pricing                   ← Pricing [Priority 0.9]
+bolchat.tech/features                  ← Features overview [Priority 0.9]
+bolchat.tech/demo                      ← Book a Demo [Priority 0.9]
+bolchat.tech/integrations              ← Integrations hub [Priority 0.8]
+bolchat.tech/docs                      ← Docs home [Priority 0.9]
+bolchat.tech/contact                   ← Contact [Priority 0.7]
+bolchat.tech/about                     ← About [Priority 0.6]
+bolchat.tech/blog                      ← Blog hub [Priority 0.8]
+```
+
+### Feature Landing Pages (create these — each targets a keyword cluster)
+
+```
+/features/multilingual-ai-agent
+/features/ai-customer-support-automation
+/features/lead-capture-chatbot
+/features/ai-chat-widget-for-website
+/features/human-handoff-workflow
+/features/knowledge-base-ai
+/features/crm-integration
+/features/analytics-dashboard
+```
+
+### Industry Landing Pages (create these — high commercial intent)
+
+```
+/solutions/ai-support-for-ecommerce
+/solutions/ai-support-for-saas
+/solutions/ai-support-for-edtech
+/solutions/ai-support-for-healthcare
+/solutions/ai-support-for-real-estate
+/solutions/ai-support-for-agencies
+```
+
+### Comparison Pages (create these — steal competitor traffic)
+
+```
+/compare/bolchat-vs-intercom
+/compare/bolchat-vs-tidio
+/compare/bolchat-vs-zendesk
+/compare/bolchat-vs-freshchat
+/compare/bolchat-vs-crisp
+/compare/bolchat-vs-drift
+```
+
+### Blog Categories
+
+```
+/blog/ai-customer-support/      ← Main pillar
+/blog/multilingual-ai/
+/blog/chatbot-vs-ai-agent/
+/blog/lead-generation/
+/blog/product-updates/
+```
+
+---
+
+## PART 4 — Metadata SEO
+
+### Homepage
+
+| Field | Value |
+|---|---|
+| **Target Keyword** | multilingual AI agent for website |
+| **Search Intent** | Commercial investigation |
+| **SEO Title** | BolChat — Multilingual AI Agent for Website Support \| 50+ Languages |
+| **Meta Description** | Deploy autonomous AI agents on your website that resolve customer queries in 50+ languages, capture leads, and escalate to humans — 24/7. No headcount needed. Start free. |
+| **H1** | Multilingual AI Agents for Customer Support — BolChat |
+
+---
+
+### Pricing Page
+
+| Field | Value |
+|---|---|
+| **Target Keyword** | AI customer support software pricing |
+| **Search Intent** | Transactional |
+| **SEO Title** | BolChat Pricing — AI Support Agent Plans for Every Team Size |
+| **Meta Description** | Simple, transparent pricing for BolChat's multilingual AI support agent. Free plan available. Scale from startup to enterprise. See all plans and features. |
+| **H1** | BolChat Pricing — Find the Right Plan for Your Team |
+
+---
+
+### Features Page
+
+| Field | Value |
+|---|---|
+| **Target Keyword** | AI customer support automation features |
+| **Search Intent** | Commercial investigation |
+| **SEO Title** | BolChat Features — AI Support Automation, Lead Capture & 50+ Languages |
+| **Meta Description** | Explore BolChat's full feature set: autonomous AI resolution, multilingual support, lead capture, CRM integrations, analytics, and enterprise security. |
+| **H1** | Everything BolChat Can Do for Your Support Team |
+
+---
+
+### Integrations Page
+
+| Field | Value |
+|---|---|
+| **Target Keyword** | AI chatbot CRM integration |
+| **Search Intent** | Commercial investigation |
+| **SEO Title** | BolChat Integrations — Connect HubSpot, Salesforce, Slack & More |
+| **Meta Description** | BolChat connects with your existing stack. Native integrations with HubSpot, Salesforce, Slack, Shopify, Zapier, and 20+ tools. Set up in minutes. |
+| **H1** | BolChat Integrations — Your AI Agent, Connected to Everything |
+
+---
+
+### Blog Hub
+
+| Field | Value |
+|---|---|
+| **Target Keyword** | AI customer support blog |
+| **Search Intent** | Informational |
+| **SEO Title** | BolChat Blog — AI Customer Support, Automation & Multilingual AI Guides |
+| **Meta Description** | Learn how to automate customer support with AI agents. Expert guides on multilingual chatbots, lead capture, and support automation for growing businesses. |
+| **H1** | The BolChat Blog — Guides on AI Support Automation |
+
+---
+
+### Docs Page
+
+| Field | Value |
+|---|---|
+| **Target Keyword** | BolChat documentation setup guide |
+| **Search Intent** | Informational / navigational |
+| **SEO Title** | BolChat Docs — Setup, API Reference & Integration Guides |
+| **Meta Description** | Official BolChat documentation. Get started with your AI agent, configure your knowledge base, manage integrations, and explore the full API reference. |
+| **H1** | BolChat Documentation |
+
+---
+
+### Contact Page
+
+| Field | Value |
+|---|---|
+| **Target Keyword** | contact BolChat support |
+| **Search Intent** | Navigational |
+| **SEO Title** | Contact BolChat — Talk to Our Team |
+| **Meta Description** | Have a question or want to explore BolChat for your team? Reach out via email or book a call. We typically respond within one business day. |
+| **H1** | Get in Touch with BolChat |
+
+---
+
+### Demo / Request Demo Page
+
+| Field | Value |
+|---|---|
+| **Target Keyword** | AI customer support software demo |
+| **Search Intent** | Transactional |
+| **SEO Title** | Book a BolChat Demo — See AI Support Automation in Action |
+| **Meta Description** | Book a 30-minute personalized demo of BolChat. See how autonomous AI agents can resolve your customer queries, in any language, in under 30 minutes of setup. |
+| **H1** | See BolChat in Action — Book Your Free Demo |
+
+---
+
+## PART 5 — Indexing Problem Fix
+
+### Why "Discovered – Currently Not Indexed" Happens
+
+Google has found your URLs (via sitemap or links) but has **chosen not to crawl or index them yet**. This happens for 4 main reasons in your case:
+
+1. **Low page authority** — New domain (bolchat.tech), Google hasn't established trust yet.
+2. **Thin content** — Some pages (blog stubs, docs) likely have very little content.
+3. **No internal links pointing to those pages** — Google's crawler may not be reaching them organically.
+4. **Crawl budget exhaustion** — If `_next/static` files clog crawl budget, Google crawls fewer meaningful pages.
+
+---
+
+### Fix 1: robots.txt (Update Now)
+
+Your current `robots.txt` references `bolchat.ai` in the comment but sitemap correctly points to `bolchat.tech`. Fix the comment and add crawl directives:
+
+```txt
+# BolChat — https://bolchat.tech
+# Allow all web crawlers full access
+
+User-agent: *
+Allow: /
+Disallow: /_next/
+Disallow: /api/
+Disallow: /_next/static/
+Disallow: /cdn-cgi/
+
+# GPTBot crawl control (optional — remove if you want AI training)
+User-agent: GPTBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://bolchat.tech/sitemap.xml
+```
+
+> **Critical:** Make sure the sitemap URL in `robots.txt` exactly matches your production domain. Currently the `public/robots.txt` points to `bolchat.ai` in the comment — verify the domain is consistent everywhere.
+
+---
+
+### Fix 2: Sitemap — Add Missing Pages
+
+Your `sitemap.ts` is missing the demo page and all feature/solution sub-pages. Add:
+
+```ts
+// In app/sitemap.ts — add these entries:
+{ url: `${SITE_URL}/demo`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+{ url: `${SITE_URL}/integrations`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+{ url: `${SITE_URL}/features/multilingual-ai-agent`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+{ url: `${SITE_URL}/features/ai-customer-support-automation`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+{ url: `${SITE_URL}/compare/bolchat-vs-intercom`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+{ url: `${SITE_URL}/compare/bolchat-vs-tidio`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+```
+
+Then in Google Search Console: **Sitemaps → Remove old → Submit `https://bolchat.tech/sitemap.xml` fresh.**
+
+---
+
+### Fix 3: Internal Linking — Add Now
+
+Every page must be reachable via at least 2 internal links from high-authority pages. Current gaps:
+
+- **Blog posts** → Link to them from the Blog hub AND from the homepage (e.g., "Read: What is an AI Agent?")
+- **Feature sub-pages** → Link from the Features overview page with anchor text that matches the keyword
+- **Comparison pages** → Link from blog posts (e.g., "BolChat vs Intercom — see our comparison")
+- **Demo page** → Link from EVERY page's nav and footer. Currently your nav may not include it.
+
+**Add to Footer:** Blog, Docs, Pricing, Compare, All Features — with keyword-rich anchor text.
+
+---
+
+### Fix 4: Fix Thin Content Pages
+
+The blog posts in your sitemap (`/blog/what-is-bolchat-guide`, etc.) must be **real pages with real content** — minimum 800 words each, with:
+- Proper H1, H2, H3 structure
+- Internal links to at least 3 other pages
+- A CTA at the bottom
+- FAQ schema markup
+
+If these pages currently render as stubs or empty shells → **remove them from the sitemap until they have content**, or Google will penalize the whole site's crawl priority.
+
+---
+
+### Fix 5: Structured Data — Add FAQ Schema to Homepage
+
+Add FAQ schema to your `JsonLd.tsx` for the homepage FAQ:
+
+```ts
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is BolChat just another chatbot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. BolChat deploys autonomous AI agents that resolve customer queries end-to-end using your private knowledge base. It doesn't just collect messages — it resolves them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What languages does BolChat support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BolChat supports 50+ languages natively including Hindi, Spanish, French, Arabic, and Mandarin. Language is auto-detected from visitor input."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does BolChat setup take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most teams are live in under 30 minutes. No engineering resources required. Embed with a single script tag."
+      }
+    }
+  ]
+};
+```
+
+Also add `BreadcrumbList` schema to all sub-pages via your `BreadcrumbJsonLd.tsx`.
+
+---
+
+### Fix 6: Next.js Technical SEO Fixes
+
+**a) Canonical tags on every page** — Currently only the root layout sets canonical. Each route needs its own:
+```tsx
+// In each page.tsx:
+export const metadata: Metadata = {
+  alternates: { canonical: "https://bolchat.tech/pricing" }
+};
+```
+
+**b) GSC Verification** — Uncomment the verification block in `layout.tsx`:
+```ts
+verification: {
+  google: "YOUR_GSC_CODE_HERE",
+},
+```
+
+**c) OG Image** — The layout references `/og-image.png` but this file doesn't exist in `/public`. Create a 1200×630 OG image and add it. Without it, social shares show broken previews which hurts brand authority signals.
+
+**d) Fix sitemap domain inconsistency** — `robots.txt` comment says `bolchat.ai`, sitemap.ts says `bolchat.tech`, layout.tsx `SITE_URL` says `bolchat.tech`. Choose one (`.tech`) and be consistent everywhere, including the JsonLd `SITE_URL`.
+
+**e) Add `<link rel="preconnect">` for Google Fonts** in layout.tsx head to improve Core Web Vitals (LCP).
+
+**f) Image `alt` text** — The hero avatars use "Founder avatar" for all 3. Make them unique and descriptive.
+
+---
+
+### Fix 7: Authority Signals
+
+These send trust signals to Google that a new domain desperately needs:
+
+1. **Submit to Product Hunt** — Gets DA60+ backlinks and brand mentions.
+2. **List on G2, Capterra, Trustpilot** — These rank for "[software] reviews" and link back.
+3. **Get a Crunchbase profile** — Instant DA80 link.
+4. **List on BetaList, Indie Hackers, SaaSHub** — Easy backlinks for new SaaS.
+5. **Get 1 guest post on a DA40+ blog** — One quality link > 100 directory links.
+
+---

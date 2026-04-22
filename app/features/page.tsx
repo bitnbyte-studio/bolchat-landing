@@ -7,8 +7,18 @@ import { Metadata } from "next";
 import { BreadcrumbJsonLd } from "../components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-    title: "Platform Features",
-    description: "Explore the features of BolChat's multilingual AI platform designed to automate and scale enterprise customer support.",
+    title: "BolChat Features — AI Support Automation, Lead Capture & 50+ Languages",
+    description:
+        "Explore BolChat's full feature set: autonomous AI resolution, multilingual customer support in 50+ languages, automated lead capture, CRM integrations, analytics, and enterprise security.",
+    alternates: {
+        canonical: "https://bolchat.tech/features",
+    },
+    openGraph: {
+        title: "BolChat Features — AI Support Automation, Lead Capture & 50+ Languages",
+        description:
+            "Autonomous AI resolution, multilingual support in 50+ languages, automated lead capture, CRM integrations, real-time analytics, and enterprise-grade security — all in one platform.",
+        url: "https://bolchat.tech/features",
+    },
 };
 
 const detailedFeatures = [
@@ -59,10 +69,11 @@ export default function FeaturesPage() {
                 <Container maxWidth="max-w-4xl" className="text-center mb-16 md:mb-24">
 
                     <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
-                        Built for scale. Designed for delight.
+                        Everything BolChat can do for your
+                        <span className="block text-rose-500">support team.</span>
                     </h1>
                     <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                        BolChat replaces rigid, old-school chatbots with a fluent, intelligent support layer that acts as your absolute best support agent.
+                        From autonomous query resolution to multilingual support in 50+ languages — BolChat replaces rigid, outdated chatbots with an intelligent AI agent that acts like your best support rep.
                     </p>
                 </Container>
 

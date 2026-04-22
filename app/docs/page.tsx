@@ -2,18 +2,21 @@ import type { Metadata } from "next";
 import { DocsContent } from "./DocsContent";
 
 export const metadata: Metadata = {
-  title: "Documentation — Complete Platform Guide & Integration Docs",
+  title: "BolChat Docs — Setup Guide, API Reference & Integration Documentation",
   description:
-    "Everything you need to set up, optimize, and scale your BolChat AI agent. Covers knowledge base best practices, system prompt engineering, widget integration guides for Next.js, React, Angular, HTML, and advanced tips.",
+    "Official BolChat documentation. Get started with your AI agent, configure your knowledge base, manage CRM integrations, and explore the full API reference. Go live in 30 minutes.",
   keywords: [
     "BolChat documentation", "AI chatbot setup guide", "chatbot integration guide",
     "BolChat integration Next.js", "BolChat React widget", "AI agent best practices",
     "knowledge base optimization", "chatbot widget embed", "customer support AI docs",
     "how to add AI chatbot to website", "chatbot system prompt", "RAG chatbot setup",
   ],
+  alternates: {
+    canonical: "https://bolchat.tech/docs",
+  },
   openGraph: {
-    title: "BolChat Documentation — Complete Platform Guide",
-    description: "Set up, optimize, and scale your AI support agent with step-by-step guides, integration docs, and best practices.",
+    title: "BolChat Documentation — Setup, API Reference & Integration Guides",
+    description: "Set up, optimize, and scale your AI support agent with step-by-step guides, integration docs, and best practices. Go live in under 30 minutes.",
     url: "https://bolchat.tech/docs",
   },
 };

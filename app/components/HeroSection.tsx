@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ChatScreen } from "./ChatScreen";
 import { Container } from "./Container";
+import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
     return (
@@ -10,54 +11,78 @@ export function HeroSection() {
             <Container className="grid items-center gap-10 lg:grid-cols-2">
                 {/* ── Left: Copy ── */}
                 <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+
+                    {/* Category pill */}
+                    <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-4 py-1.5 text-sm font-semibold text-rose-600">
+                        <span className="h-1.5 w-1.5 rounded-full bg-rose-500 animate-pulse" />
+                        AI Agent for Website Customer Support
+                    </div>
+
                     <h1 className="mb-5 text-[2.5rem] font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-7xl">
-                        Multilingual AI Agents for
+                        Your Website&apos;s AI Support Agent.
                         <span className="block bg-gradient-to-r from-rose-500 to-orange-400 bg-clip-text text-transparent">
-                            Modern Businesses
+                            Speaks Every Language.
                         </span>
                     </h1>
 
                     <p className="mb-8 max-w-[20rem] sm:max-w-xl text-[17px] leading-relaxed text-slate-600 sm:text-xl">
-                        BolChat deploys autonomous AI agents that resolve queries, capture leads, and grow your business — 24/7, in any language.
+                        BolChat deploys autonomous AI agents on your website that resolve customer queries,
+                        capture leads, and escalate to humans — in 50+ languages, 24/7.
+                        No extra headcount needed.
                     </p>
 
                     <div className="flex w-full flex-col items-center gap-3 sm:flex-row lg:justify-start">
                         <Link
-                            href="/contact"
-                            className="w-full rounded-2xl bg-gradient-to-r from-rose-500 to-pink-500 px-8 py-4 text-center text-lg font-bold text-white shadow-xl shadow-rose-200/50 transition-all hover:scale-105 active:scale-95 sm:w-auto"
+                            href="/demo"
+                            className="group w-full rounded-2xl bg-gradient-to-r from-rose-500 to-pink-500 px-8 py-4 text-center text-lg font-bold text-white shadow-xl shadow-rose-200/50 transition-all hover:scale-105 active:scale-95 sm:w-auto flex items-center justify-center gap-2"
                         >
-                            Request Demo
+                            Book a Free Demo
+                            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                         </Link>
                         <a
                             href="#how-it-works"
                             className="w-full rounded-2xl border cursor-pointer shadow-sm border-slate-200 bg-white/80 px-8 py-4 text-center text-lg font-bold text-slate-900 transition-all hover:bg-white sm:w-auto"
                         >
-                            How it works
+                            See How It Works
                         </a>
                     </div>
 
-                    {/* Trust avatars */}
+                    {/* Trust strip */}
                     <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 text-sm text-slate-500">
                         <div className="flex -space-x-3">
                             <img
                                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&auto=format&fit=crop"
-                                alt="Founder avatar"
+                                alt="Startup founder using BolChat AI support"
                                 className="h-10 w-10 rounded-full border-2 border-white object-cover"
                             />
                             <img
                                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&auto=format&fit=crop"
-                                alt="Founder avatar"
+                                alt="SaaS team member automating customer support"
                                 className="h-10 w-10 rounded-full border-2 border-white object-cover"
                             />
                             <img
                                 src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&auto=format&fit=crop"
-                                alt="Founder avatar"
+                                alt="E-commerce business owner growing with AI agents"
                                 className="h-10 w-10 rounded-full border-2 border-white object-cover"
                             />
                         </div>
                         <p>
-                            Trusted by founders from <span className="font-bold">500+ startups</span>
+                            Trusted by founders from <span className="font-bold text-slate-900">500+ startups</span>
                         </p>
+                    </div>
+
+                    {/* Key metrics */}
+                    <div className="mt-8 flex flex-wrap gap-6">
+                        {[
+                            { value: "50+", label: "Languages" },
+                            { value: "< 30min", label: "Setup time" },
+                            { value: "24/7", label: "Autonomous" },
+                        ].map((stat) => (
+                            <div key={stat.label} className="flex flex-col">
+                                <span className="text-xl font-extrabold text-slate-900">{stat.value}</span>
+                                <span className="text-xs font-medium text-slate-500">{stat.label}</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
@@ -65,9 +90,7 @@ export function HeroSection() {
                 <div className="relative hidden justify-center lg:flex lg:justify-end">
                     <div className="relative flex h-[300px] w-[300px] sm:h-[380px] sm:w-[380px] items-center justify-center lg:h-[500px] lg:w-[500px]">
                         <div className="absolute h-full w-full rounded-full bg-rose-400/10 blur-[100px]" />
-
                         <ChatScreen />
-
                     </div>
                 </div>
             </Container>

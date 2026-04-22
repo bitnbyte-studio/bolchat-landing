@@ -12,43 +12,43 @@ import {
 
 const features = [
     {
-        title: "Agent Personas",
-        description: "Strict personas, custom logic, and perfect brand voice execution.",
+        title: "Custom AI Agent Personas",
+        description: "Train your AI agent with your brand tone, FAQs, and business rules. It responds like your best support rep — consistently, every time.",
         icon: Settings2,
         colorBg: "bg-blue-100",
         colorIcon: "text-blue-600"
     },
     {
-        title: "Total Styling",
-        description: "Full control over widget UI, colors, typography, and placement.",
+        title: "Fully Branded Chat Widget",
+        description: "Full control over widget colors, typography, and placement. Match your brand exactly. Embed in minutes with a single script tag.",
         icon: Layout,
         colorBg: "bg-indigo-100",
         colorIcon: "text-indigo-600"
     },
     {
-        title: "Live Analytics",
-        description: "Track performance, containment trends, and volume live.",
+        title: "Real-Time Support Analytics",
+        description: "Track resolution rates, containment trends, and conversation volume live. Know exactly where your AI wins and where humans step in.",
         icon: BarChart3,
         colorBg: "bg-rose-100",
         colorIcon: "text-rose-600"
     },
     {
-        title: "Audit Logging",
-        description: "Every transcript saved. Gain total oversight over conversations.",
+        title: "Complete Conversation Audit Logs",
+        description: "Every conversation stored, searchable, and exportable. Full oversight for compliance, quality control, and AI performance tuning.",
         icon: Eye,
         colorBg: "bg-emerald-100",
         colorIcon: "text-emerald-600"
     },
     {
-        title: "Enterprise TLS",
-        description: "Your data is encrypted and never trains public AI models.",
+        title: "Enterprise-Grade Security",
+        description: "AES-256 encryption in transit and at rest. Your private knowledge base is never shared with or used to train any public AI model.",
         icon: ShieldCheck,
         colorBg: "bg-slate-100",
         colorIcon: "text-slate-700"
     },
     {
-        title: "Auto-Leads",
-        description: "Passively capture emails right mid-conversation directly to CRM.",
+        title: "Automated Lead Capture to CRM",
+        description: "BolChat captures visitor emails and buying intent mid-conversation, then syncs directly to your CRM — without a single form interruption.",
         icon: UserPlus,
         colorBg: "bg-amber-100",
         colorIcon: "text-amber-600"
@@ -61,11 +61,11 @@ export function FeaturesSection() {
             <Container maxWidth="max-w-6xl">
                 <div className="mb-10 md:mb-16 max-w-2xl text-center md:text-left mx-auto md:mx-0">
                     <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-5xl leading-tight">
-                        Everything you <br className="hidden sm:block"/>
-                        need to <span className="text-rose-500">launch.</span>
+                        Every tool to automate, <br className="hidden sm:block"/>
+                        resolve, and <span className="text-rose-500">grow.</span>
                     </h2>
                     <p className="text-[15px] sm:text-lg text-slate-600 font-medium leading-relaxed px-4 md:px-0">
-                        BolChat isn't just a toy. It's a highly strict infrastructure to give you absolute control over your global support.
+                        Production-grade AI agent infrastructure that gives you absolute control over your global customer support — without growing your team.
                     </p>
                 </div>
 
@@ -87,4 +87,3 @@ export function FeaturesSection() {
         </section>
     );
 }
-

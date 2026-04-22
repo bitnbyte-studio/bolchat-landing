@@ -8,45 +8,17 @@ import Link from "next/link";
 import { BreadcrumbJsonLd } from "../../components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-    title: "How to Add an AI Chatbot to Your Website in 2026 (Step-by-Step)",
+    title: "How to Add an AI Agent to Your Website (Step-by-Step Guide 2026)",
     description:
-        "Learn how to add an AI chatbot to your website step by step. Improve customer support, capture leads 24/7, and reduce costs — no coding required. Works with any website.",
+        "Learn how to add an AI agent to your website in under 30 minutes. Step-by-step guide covering knowledge base setup, agent configuration, and embedding on Next.js, WordPress, Webflow, and Shopify.",
+    alternates: { canonical: "https://bolchat.tech/blog/how-to-add-ai-chatbot-to-website" },
+    openGraph: {
+        title: "How to Add an AI Agent to Your Website (Step-by-Step Guide 2026)",
+        description:
+            "A complete step-by-step guide to adding an autonomous AI agent to your website. Works on Next.js, WordPress, Webflow, Shopify, and any HTML site. No coding required.",
+        url: "https://bolchat.tech/blog/how-to-add-ai-chatbot-to-website",
+    },
 };
-
-const steps = [
-    {
-        title: "Choose the right AI chatbot platform",
-        body: "Look for a platform that offers natural language understanding, multilingual support, and simple script-based integration. BolChat supports 50+ languages out of the box and requires zero coding to deploy.",
-    },
-    {
-        title: "Create and train your chatbot",
-        body: "After signing up, upload your knowledge base — PDFs, URLs, or plain text. The more context you provide, the more accurate your agent's responses will be.",
-    },
-    {
-        title: "Customize the chat widget",
-        body: "Match the widget to your brand: adjust colors, position, and the welcome message. First impressions matter — a branded widget builds trust instantly.",
-    },
-    {
-        title: "Copy your integration script",
-        body: "BolChat gives you a single line of JavaScript to add to your site.",
-    },
-    {
-        title: "Add the script to your website",
-        body: "Paste it before the closing </body> tag in your HTML, or inside your root layout file if you're using Next.js or React.",
-    },
-    {
-        title: "Test before going live",
-        body: "Ask common customer questions, check responses on both mobile and desktop, and verify that lead capture is working correctly.",
-    },
-];
-
-const reasons = [
-    ["Instant customer support", "Users don't like waiting. A chatbot responds in milliseconds, improving satisfaction and reducing bounce rates."],
-    ["24/7 availability", "Your business stays active even when your team is offline — across every time zone."],
-    ["Automatic lead generation", "Collect emails, phone numbers, and customer intent without lifting a finger."],
-    ["Lower support costs", "Businesses typically cut support costs by 60–70% after deploying an AI agent."],
-    ["Multilingual reach", "Serve customers in 50+ languages — critical for businesses targeting global or multilingual markets."],
-];
 
 export default function BlogPost() {
     return (
@@ -55,181 +27,183 @@ export default function BlogPost() {
                 items={[
                     { name: "Home", item: "/" },
                     { name: "Blog", item: "/blog" },
-                    { name: "How to Add AI Chatbot to Website", item: "/blog/how-to-add-ai-chatbot-to-website" },
+                    { name: "How to Add an AI Agent to Your Website", item: "/blog/how-to-add-ai-chatbot-to-website" },
                 ]}
             />
             <Navbar />
 
             <main className="py-16 md:py-28">
                 <Container maxWidth="max-w-2xl" className="px-6 md:px-0">
-
-                    {/* Back */}
-                    <Link
-                        href="/blog"
-                        className="inline-flex items-center gap-1.5 text-[0.8rem] font-medium text-slate-400 hover:text-rose-500 transition-colors mb-10 md:mb-14"
-                    >
+                    <Link href="/blog" className="inline-flex items-center gap-1.5 text-[0.8rem] font-medium text-slate-400 hover:text-rose-500 transition-colors mb-10 md:mb-14">
                         <ArrowLeft className="h-3.5 w-3.5" /> Back to Blog
                     </Link>
 
-                    {/* Header */}
                     <header className="mb-12 md:mb-16">
                         <div className="flex items-center gap-3 mb-6">
                             <span className="text-[10.5px] font-medium tracking-[0.1em] uppercase px-2.5 py-1 rounded-full bg-rose-50 text-rose-700">
                                 Guides
                             </span>
-                            <span className="text-[0.75rem] text-slate-400">
-                                April 11, 2026 · BolChat Content Team
-                            </span>
+                            <span className="text-[0.75rem] text-slate-400">April 11, 2026 · BolChat Content Team</span>
                         </div>
-
                         <h1 className="text-[clamp(1.9rem,5vw,3rem)] font-medium leading-[1.1] tracking-[-0.03em] text-slate-900 mb-5">
-                            How to Add an AI Chatbot to Your Website in 2026
+                            How to Add an AI Agent to Your Website (Step-by-Step Guide)
                         </h1>
-
                         <p className="text-[1.05rem] leading-[1.75] text-slate-500">
-                            Customers expect instant answers. Whether you're running an e-commerce store, a SaaS product, or a local service business, an AI chatbot handles support, captures leads, and converts visitors — around the clock, in any language.
+                            Adding an AI agent to your website used to require an engineering team, weeks of development, and significant budget. In 2026, you can deploy a fully functional autonomous AI agent in under 30 minutes — with no code required. This guide walks you through every step.
                         </p>
                     </header>
 
-                    {/* Body */}
-                    <div className="space-y-12 text-[0.9375rem] leading-[1.8] text-slate-500">
+                    <div className="space-y-10 text-[0.9375rem] leading-[1.8] text-slate-500">
 
-                        {/* What is section */}
-                        <div>
-                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-3">
-                                What is an AI chatbot?
-                            </h2>
-                            <p>
-                                An AI chatbot is a software agent that uses large language models to understand natural language and respond like a human. Unlike traditional rule-based bots — which only follow fixed scripts — modern AI chatbots understand context, remember the conversation, and give accurate, on-brand answers drawn from your own business data.
-                            </p>
-                        </div>
-
-                        {/* Why your site needs one */}
-                        <div>
-                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-4">
-                                Why your website needs an AI chatbot
-                            </h2>
-                            <ul className="space-y-3">
-                                {reasons.map(([title, desc]) => (
-                                    <li key={title} className="flex gap-3 p-4 rounded-xl border border-slate-100 bg-slate-50/50 list-none">
-                                        <CheckCircle2 className="h-4 w-4 text-rose-400 shrink-0 mt-0.5" />
-                                        <span>
-                                            <span className="font-medium text-slate-700">{title} — </span>
-                                            {desc}
-                                        </span>
-                                    </li>
-                                ))}
+                        <div className="rounded-2xl border border-blue-100 bg-blue-50/40 p-5 text-sm">
+                            <p className="font-semibold text-slate-800 mb-1">What you&apos;ll need</p>
+                            <ul className="space-y-1 text-slate-600">
+                                <li>• A BolChat account (free to start — <Link href="/contact" className="text-rose-500 font-medium">get access here</Link>)</li>
+                                <li>• Your FAQs, help docs, or product pages (in any format — PDF, URL, or text)</li>
+                                <li>• Access to your website&apos;s code or CMS (to paste one script tag)</li>
                             </ul>
                         </div>
 
-                        {/* Steps */}
                         <div>
-                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-5">
-                                Step-by-step: how to add a chatbot to your website
-                            </h2>
-                            <ol className="space-y-3">
-                                {steps.map((step, i) => (
-                                    <li key={step.title} className="flex gap-4 p-5 rounded-xl border border-slate-100 list-none">
-                                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-slate-900 text-white text-[0.7rem] font-medium mt-0.5">
-                                            {i + 1}
-                                        </span>
-                                        <span>
-                                            <span className="font-medium text-slate-700">{step.title} — </span>
-                                            <span className="text-slate-500">{step.body}</span>
-                                        </span>
+                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-5">Step 1 — Connect your knowledge base</h2>
+                            <p>Your AI agent&apos;s quality depends entirely on the quality of the information it has access to. The first step is connecting your knowledge base — the private repository of information BolChat will use to answer customer queries.</p>
+                            <p className="mt-4">BolChat supports multiple input formats:</p>
+                            <ul className="mt-3 space-y-2 list-none">
+                                {["PDF files — product manuals, FAQs, onboarding guides", "Website URLs — BolChat scrapes your site automatically", "Plain text — paste your FAQs directly", "Notion pages, Google Docs, and more via integrations"].map((item) => (
+                                    <li key={item} className="flex gap-2.5 text-sm text-slate-600">
+                                        <CheckCircle2 className="h-3.5 w-3.5 text-rose-400 shrink-0 mt-0.5" />
+                                        {item}
                                     </li>
                                 ))}
-                            </ol>
+                            </ul>
+                            <p className="mt-4">BolChat processes your content using RAG (Retrieval-Augmented Generation) — building a private vector index that the AI queries in real-time when answering questions. Your data is encrypted and never used to train public models.</p>
                         </div>
 
-                        {/* Code block */}
                         <div>
-                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-3">
-                                The integration snippet
-                            </h2>
-                            <p className="mb-4">Add this single line before your closing <code className="text-[0.85em] bg-slate-100 px-1.5 py-0.5 rounded text-slate-700">{`</body>`}</code> tag:</p>
-                            <pre className="rounded-xl bg-slate-900 px-5 py-4 text-[0.8rem] text-emerald-400 overflow-x-auto">
-                                <code>{`<script src="https://bolchat.tech/widget.js" async></script>`}</code>
-                            </pre>
-                            <p className="mt-3 text-[0.85rem] text-slate-400">
-                                Using Next.js? Add it inside your root <code className="text-[0.85em] bg-slate-100 px-1.5 py-0.5 rounded text-slate-600">layout.tsx</code> file instead.
-                            </p>
-                        </div>
-
-                        {/* Mid-article CTA */}
-                        <div className="rounded-2xl bg-slate-900 p-7 text-center">
-                            <p className="text-[10.5px] font-medium tracking-[0.12em] uppercase text-rose-400 mb-2">No coding required</p>
-                            <h2 className="text-[1.15rem] font-medium tracking-[-0.02em] text-white mb-2">
-                                Deploy your AI agent in under 5 minutes
-                            </h2>
-                            <p className="text-[0.875rem] leading-[1.7] text-slate-400 max-w-sm mx-auto mb-5">
-                                Sign up, train your agent on your content, paste one line of code, and go live.
-                            </p>
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center gap-2 rounded-xl bg-rose-500 px-7 py-3 text-[0.875rem] font-medium text-white hover:bg-rose-600 transition-colors"
-                            >
-                                Start free trial
-                            </Link>
-                        </div>
-
-                        {/* Advanced features */}
-                        <div>
-                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-3">
-                                Advanced features worth using
-                            </h2>
-                            <p className="mb-4">Once your chatbot is live, these features will significantly improve performance:</p>
-                            <ul className="space-y-3">
+                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-5">Step 2 — Configure your AI agent persona</h2>
+                            <p>Once your knowledge base is connected, configure your agent&apos;s behavior in the dashboard. Key settings include:</p>
+                            <ul className="mt-4 space-y-3 list-none">
                                 {[
-                                    ["Knowledge base training", "Upload product docs, FAQs, and support articles so the agent answers from your actual content — not generic AI responses."],
-                                    ["Human handoff", "Let users escalate to a live agent for complex issues. The AI handles volume; humans handle nuance."],
-                                    ["Lead capture forms", "Automatically collect names, emails, and intent data during the conversation — no separate form needed."],
-                                    ["Conversation analytics", "Track which questions users ask most, where conversations drop off, and your overall containment rate."],
+                                    ["Agent name and persona", "Give your agent a name and define its personality — professional, friendly, formal, or casual."],
+                                    ["Brand voice instructions", "Write a brief system prompt: 'Always respond in a helpful, concise tone. Never discuss competitor pricing.'"],
+                                    ["Language settings", "Choose your primary language and enable auto-detection for 50+ additional languages."],
+                                    ["Escalation triggers", "Define when the agent should escalate — e.g., when sentiment is negative, when the query is about billing, or when the user explicitly requests a human."],
+                                    ["Lead capture rules", "Set when to capture visitor contact details — e.g., after 2 messages, or when the visitor asks about pricing."],
                                 ].map(([title, desc]) => (
-                                    <li key={title} className="flex gap-3 p-4 rounded-xl border border-slate-100 bg-slate-50/50 list-none">
+                                    <li key={title as string} className="flex gap-3 p-4 rounded-xl border border-slate-100 bg-slate-50/50">
                                         <CheckCircle2 className="h-4 w-4 text-rose-400 shrink-0 mt-0.5" />
                                         <span>
-                                            <span className="font-medium text-slate-700">{title} — </span>
-                                            {desc}
+                                            <span className="font-medium text-slate-700 text-sm">{title} — </span>
+                                            <span className="text-slate-500 text-sm">{desc}</span>
                                         </span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
 
-                        {/* Why BolChat */}
                         <div>
-                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-3">
-                                Why businesses choose BolChat
-                            </h2>
-                            <p>
-                                Most chatbot platforms are either too rigid (rule-based) or too complex to set up. BolChat is built for modern businesses that need an intelligent, multilingual agent deployed fast — without engineering resources.
-                            </p>
-                            <p className="mt-3">
-                                It supports 50+ languages, integrates with any website in minutes, and learns from your existing content to deliver accurate, on-brand responses from day one.
-                            </p>
+                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-5">Step 3 — Customize the chat widget</h2>
+                            <p>Your chat widget is the customer-facing interface. BolChat gives you full control over its appearance — no designer required.</p>
+                            <ul className="mt-4 space-y-2 list-none">
+                                {["Brand colors and accent colors", "Widget position (bottom-right, bottom-left, custom)", "Launcher button style and icon", "Welcome message and initial prompts", "Mobile-responsive behavior"].map((item) => (
+                                    <li key={item} className="flex gap-2.5 text-sm text-slate-600">
+                                        <CheckCircle2 className="h-3.5 w-3.5 text-rose-400 shrink-0 mt-0.5" />
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
 
-                        {/* Final CTA */}
-                        <div className="border-t border-slate-100 pt-10 text-center">
-                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-2">
-                                Ready to add a chatbot to your website?
-                            </h2>
-                            <p className="text-[0.875rem] text-slate-400 mb-7">
-                                Join businesses using BolChat to automate support and capture more leads — starting today.
+                        <div>
+                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-5">Step 4 — Embed on your website</h2>
+                            <p>Once configured, BolChat generates a single script tag. Paste it into your website before the closing <code className="bg-slate-100 px-1.5 py-0.5 rounded text-[0.8rem] text-slate-700">&lt;/body&gt;</code> tag:</p>
+
+                            <div className="mt-4 rounded-xl bg-slate-900 px-5 py-4 font-mono text-[0.8rem] text-slate-300 overflow-x-auto">
+                                <span className="text-slate-500">{"<!-- BolChat AI Agent -->"}</span>
+                                <br />
+                                {`<script`}
+                                <br />
+                                {"  "}
+                                <span className="text-rose-400">src</span>
+                                {`="`}
+                                <span className="text-emerald-400">https://cdn.bolchat.tech/widget.js</span>
+                                {`"`}
+                                <br />
+                                {"  "}
+                                <span className="text-rose-400">data-key</span>
+                                {`="`}
+                                <span className="text-yellow-400">YOUR_AGENT_KEY</span>
+                                {`"`}
+                                <br />
+                                {`  defer>`}
+                                <br />
+                                {`</script>`}
+                            </div>
+
+                            <p className="mt-4">Platform-specific instructions:</p>
+                            <ul className="mt-3 space-y-2 list-none">
+                                {[
+                                    ["Next.js", "Add as a <Script> component in your root layout.tsx with strategy='afterInteractive'"],
+                                    ["WordPress", "Paste in Appearance → Theme Editor → footer.php, or use a header/footer plugin"],
+                                    ["Webflow", "Project Settings → Custom Code → Footer Code"],
+                                    ["Shopify", "Online Store → Themes → Edit Code → theme.liquid before </body>"],
+                                    ["Framer", "Site Settings → General → Custom Code → End of <body>"],
+                                ].map(([platform, instruction]) => (
+                                    <li key={platform as string} className="flex gap-2.5 text-sm text-slate-600">
+                                        <span className="font-semibold text-slate-800 shrink-0">{platform}:</span>
+                                        <span>{instruction}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-3">Step 5 — Test and go live</h2>
+                            <p>Before going live, test your agent on a staging environment. Ask it your 10 most common customer questions and verify the answers are accurate, on-brand, and in the correct language. Check escalation behaviour by asking a question outside your knowledge base.</p>
+                            <p className="mt-4">Once satisfied, publish to production. Your AI agent is now live — resolving customer queries, capturing leads, and escalating to your team 24/7.</p>
+                        </div>
+
+                        <div className="rounded-2xl bg-slate-900 p-8 text-center">
+                            <p className="text-[10.5px] font-medium tracking-[0.12em] uppercase text-rose-400 mb-3">Ready to deploy?</p>
+                            <h2 className="text-[1.25rem] font-medium tracking-[-0.02em] text-white mb-3">Get BolChat on your website today</h2>
+                            <p className="text-[0.875rem] leading-[1.7] text-slate-400 max-w-sm mx-auto mb-6">
+                                Free to start. Live in under 30 minutes. Resolves queries in 50+ languages autonomously.
                             </p>
+                            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[0.75rem] text-slate-500 font-medium tracking-wide">
+                                <span>No credit card</span>
+                                <span className="text-slate-700">·</span>
+                                <span>No code required</span>
+                                <span className="text-slate-700">·</span>
+                                <span>30-min setup</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-3">Common mistakes to avoid</h2>
+                            <ul className="space-y-2 list-none">
+                                {[
+                                    "Don't connect a thin knowledge base — the more context you give, the better the answers",
+                                    "Don't skip testing in staging — verify escalation triggers before going live",
+                                    "Don't forget to set a fallback message for out-of-scope queries",
+                                    "Don't ignore analytics — check resolution rates weekly in the first month",
+                                ].map((item) => (
+                                    <li key={item} className="flex gap-2.5 text-sm text-slate-600">
+                                        <span className="text-slate-300 mt-0.5 shrink-0">—</span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div className="border-t border-slate-100 pt-10 text-center">
+                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-2">Start for free in 30 minutes</h2>
+                            <p className="text-[0.875rem] text-slate-400 mb-7">Book a demo and we&apos;ll walk through the setup live — configured for your specific website and use case.</p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-                                <Link
-                                    href="/contact"
-                                    className="w-full sm:w-auto rounded-xl bg-rose-500 px-8 py-3.5 text-[0.875rem] font-medium text-white hover:bg-rose-600 transition-colors"
-                                >
-                                    Start free trial
+                                <Link href="/demo" className="w-full sm:w-auto rounded-xl bg-rose-500 px-8 py-3.5 text-[0.875rem] font-medium text-white hover:bg-rose-600 transition-colors">
+                                    Book a Free Demo
                                 </Link>
-                                <Link
-                                    href="/"
-                                    className="w-full sm:w-auto rounded-xl border border-slate-200 px-8 py-3.5 text-[0.875rem] font-medium text-slate-600 hover:bg-slate-50 transition-colors"
-                                >
-                                    See how it works
+                                <Link href="/docs" className="w-full sm:w-auto rounded-xl border border-slate-200 px-8 py-3.5 text-[0.875rem] font-medium text-slate-600 hover:bg-slate-50 transition-colors">
+                                    Read the Docs
                                 </Link>
                             </div>
                         </div>

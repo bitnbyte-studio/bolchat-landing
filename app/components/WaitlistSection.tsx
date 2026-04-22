@@ -2,34 +2,71 @@
 
 import { Container } from "./Container";
 import Link from "next/link";
-import { MoveRight } from "lucide-react";
+import { MoveRight, Check } from "lucide-react";
+
+const benefits = [
+    "Resolves queries autonomously — not just deflects them",
+    "Supports 50+ languages natively — not via translation layers",
+    "Captures leads without interrupting the conversation",
+    "RAG-powered private knowledge base — zero hallucinations",
+    "Human handoff with full context when it matters",
+    "Deploys in under 30 minutes — no engineering required",
+];
 
 export function CTASection() {
     return (
         <section className="py-16 md:py-24">
-            <Container maxWidth="max-w-4xl">
-                <div className="rounded-[2.5rem] bg-[#1a2135] p-10 md:p-16 shadow-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-10 border border-slate-800">
-                    <div className="max-w-xl">
-                        <h3 className="text-slate-400 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-4">
-                            Ready to automate?
-                        </h3>
-                        <p className="text-xl sm:text-2xl md:text-3xl font-medium text-white leading-snug">
-                            Join top-tier enterprises deploying BolChat to reduce overhead and 10x their customer satisfaction scores.
-                        </p>
-                    </div>
+            <Container maxWidth="max-w-5xl">
+                <div className="rounded-[2.5rem] bg-[#1a2135] p-10 md:p-16 shadow-2xl border border-slate-800 overflow-hidden relative">
 
-                    <div className="shrink-0">
-                        <Link
-                            href="/contact"
-                            className="group flex items-center gap-2 font-bold text-rose-500 hover:text-rose-400 transition-colors text-[17px] md:text-lg"
-                        >
-                            Request your demo
-                            <MoveRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                        </Link>
+                    {/* Background glow */}
+                    <div className="absolute -top-24 -right-24 h-[400px] w-[400px] rounded-full bg-rose-500/10 blur-[100px] pointer-events-none" />
+                    <div className="absolute -bottom-24 -left-24 h-[300px] w-[300px] rounded-full bg-indigo-500/10 blur-[100px] pointer-events-none" />
+
+                    <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12">
+
+                        {/* Left: Copy */}
+                        <div className="max-w-xl">
+                            <p className="text-rose-400 text-xs font-bold tracking-[0.2em] uppercase mb-4">
+                                Start resolving. Stop replying.
+                            </p>
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+                                Join 500+ businesses automating customer support with BolChat.
+                            </h2>
+
+                            {/* Why BolChat checklist */}
+                            <ul className="space-y-2.5 mb-8">
+                                {benefits.map((b, i) => (
+                                    <li key={i} className="flex items-start gap-3 text-slate-300 text-sm font-medium">
+                                        <Check className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                                        {b}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Right: CTAs */}
+                        <div className="shrink-0 flex flex-col gap-4 w-full lg:w-auto">
+                            <Link
+                                href="/demo"
+                                className="group flex items-center justify-center gap-2 font-bold bg-white text-slate-900 hover:bg-rose-50 transition-colors text-[17px] md:text-lg px-8 py-4 rounded-2xl"
+                            >
+                                Book a Free Demo
+                                <MoveRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                            </Link>
+                            <Link
+                                href="/contact"
+                                className="flex items-center justify-center gap-2 font-semibold text-slate-400 hover:text-white transition-colors text-sm px-8 py-3 rounded-2xl border border-slate-700 hover:border-slate-500"
+                            >
+                                Talk to Sales
+                            </Link>
+                            <p className="text-center text-xs text-slate-500 font-medium">
+                                Free to start · No credit card required
+                            </p>
+                        </div>
                     </div>
                 </div>
             </Container>
         </section>
     );
 }
-

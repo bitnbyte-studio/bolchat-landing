@@ -1,5 +1,7 @@
 "use client";
 
+import { Container } from "./Container";
+
 /* ─── Brand logos as inline SVG ─── */
 function ShopifyLogo() {
     return (
@@ -79,53 +81,55 @@ function SalesforceLogo() {
     );
 }
 
-function MagentoLogo() {
+function ZapierLogo() {
     return (
-        <svg viewBox="0 0 50 57" className="h-10 w-8" aria-label="Magento">
-            <path d="M25 0L0 14.3v28.5l7.1 4.1V18.4L25 8.2l17.9 10.2v28.5l7.1-4.1V14.3L25 0z" fill="#EE672F" />
-            <path d="M28.6 44.8V20.5L25 18.4l-3.6 2.1v24.3l-7.1-4.1V16.3L25 10.2l10.7 6.1v24.4l-7.1 4.1z" fill="#EE672F" />
+        <svg viewBox="0 0 64 64" className="h-9 w-9" aria-label="Zapier">
+            <path d="M32 0C14.327 0 0 14.327 0 32s14.327 32 32 32 32-14.327 32-32S49.673 0 32 0z" fill="#FF4A00" />
+            <path d="M47.5 29.5H37.6l7-7-3.1-3.1-7 7V16.5h-4.4v10.1l-7.1-7.1-3.1 3.1 7.1 7.1H16.5v4.4h10.5l-7.1 7.1 3.1 3.1 7.1-7.1V47.5h4.4V37.2l7 7 3.1-3.1-7-7H47.5v-4.6z" fill="#fff" />
         </svg>
     );
 }
 
-/* ─── Brand entries ─── */
 const BRANDS = [
-    { id: "shopify", Logo: ShopifyLogo },
-    { id: "slack", Logo: SlackLogo },
-    { id: "wordpress", Logo: WordPressLogo },
-    { id: "hubspot", Logo: HubSpotLogo },
-    { id: "intercom", Logo: IntercomLogo },
-    { id: "zendesk", Logo: ZendeskLogo },
-    { id: "salesforce", Logo: SalesforceLogo },
-    { id: "magento", Logo: MagentoLogo },
+    { id: "shopify", Logo: ShopifyLogo, name: "Shopify" },
+    { id: "slack", Logo: SlackLogo, name: "Slack" },
+    { id: "wordpress", Logo: WordPressLogo, name: "WordPress" },
+    { id: "hubspot", Logo: HubSpotLogo, name: "HubSpot" },
+    { id: "intercom", Logo: IntercomLogo, name: "Intercom" },
+    { id: "zendesk", Logo: ZendeskLogo, name: "Zendesk" },
+    { id: "salesforce", Logo: SalesforceLogo, name: "Salesforce" },
+    { id: "zapier", Logo: ZapierLogo, name: "Zapier" },
 ];
-
-import { Container } from "./Container";
 
 export function EcosystemSection() {
     return (
-        <section
-            id="ecosystem"
-            className="border-y border-slate-100 bg-white/40 py-8 md:py-12"
-        >
+        <section id="integrations" className="border-y border-slate-100 bg-white/40 py-12 md:py-16">
             <Container className="text-center">
-                <h2 className="mb-10 text-xl font-bold text-slate-800 tracking-tight">
-                    Seamlessly Integrated with Your Tech Stack
+                <p className="text-[11px] font-bold tracking-[0.15em] uppercase text-rose-500 mb-4">
+                    Integrations
+                </p>
+                <h2 className="mb-3 text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    Plugs into the tools your team already uses.
                 </h2>
+                <p className="text-slate-500 font-medium text-sm md:text-base mb-10 max-w-xl mx-auto">
+                    Native integrations with your CRM, helpdesk, and e-commerce stack. Connect in minutes — no code required.
+                </p>
 
                 <div className="flex flex-wrap items-center justify-center gap-10 md:gap-14 grayscale opacity-60 transition-all duration-500 hover:grayscale-0 hover:opacity-100">
-                    {BRANDS.map(({ id, Logo }) => (
+                    {BRANDS.map(({ id, Logo, name }) => (
                         <div
                             key={id}
                             className="flex items-center justify-center transition-all duration-300 cursor-default hover:scale-105"
+                            title={name}
                         >
                             <Logo />
                         </div>
                     ))}
                 </div>
 
-                <p className="mt-10 text-sm font-medium text-rose-500">
-                    + Over 100+ native integrations available via Zapier and Webhooks.
+                <p className="mt-10 text-sm font-semibold text-slate-500">
+                    + 100+ additional integrations via{" "}
+                    <span className="text-rose-500">Zapier</span> and native webhooks.
                 </p>
             </Container>
         </section>

@@ -6,8 +6,18 @@ import { Metadata } from "next";
 import { BreadcrumbJsonLd } from "../components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-    title: "About BolChat | The Platform & Founder",
-    description: "Discover how BolChat combines AI support with robust lead capturing and analytics. Built by software developer Shubham Singh.",
+    title: "About BolChat — Multilingual AI Support Platform & Our Story",
+    description:
+        "Learn how BolChat was built to be more than a chatbot — an autonomous AI agent platform that resolves support queries, captures leads, and scales globally. Built by Shubham Singh.",
+    alternates: {
+        canonical: "https://bolchat.tech/about",
+    },
+    openGraph: {
+        title: "About BolChat — Multilingual AI Support Platform & Our Story",
+        description:
+            "BolChat is an AI-native customer support platform built for global businesses. Autonomous resolution, 50+ languages, lead capture, and enterprise security — in one widget.",
+        url: "https://bolchat.tech/about",
+    },
 };
 
 export default function AboutPage() {
@@ -111,6 +121,19 @@ export default function AboutPage() {
                                         </div>
                                         Email Me
                                     </a>
+                                    <a 
+                                        href="https://www.crunchbase.com/organization/bolchat" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer" 
+                                        className="flex items-center gap-3 text-[15px] font-medium text-slate-400 hover:text-white transition-colors group"
+                                    >
+                                        <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
+                                            <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M21.6 0H2.4C1.08 0 0 1.08 0 2.4v19.2C0 22.92 1.08 24 2.4 24h19.2c1.32 0 2.4-1.08 2.4-2.4V2.4C24 1.08 22.92 0 21.6 0zM7.2 18H4.8V9.6h2.4V18zm-1.2-9.6c-.77 0-1.4-.63-1.4-1.4s.63-1.4 1.4-1.4 1.4.63 1.4 1.4-.63 1.4-1.4 1.4zM19.2 18h-2.4v-4.68c0-.9-.72-1.62-1.62-1.62s-1.62.72-1.62 1.62V18H11.1V9.6h2.4v1.08c.66-.84 1.68-1.38 2.82-1.38 1.98 0 3.6 1.62 3.6 3.6V18z"/>
+                                            </svg>
+                                        </div>
+                                        Crunchbase Profile
+                                    </a>
                                 </div>
                             </div>
 
@@ -138,6 +161,28 @@ export default function AboutPage() {
                                 </div>
                             </div>
 
+                        </div>
+                    </section>
+
+                    {/* ════════ FEATURED ON ════════ */}
+                    <section className="mt-16 md:mt-20">
+                        <p className="text-[11px] font-bold tracking-[0.15em] uppercase text-slate-400 text-center mb-6">
+                            Featured On
+                        </p>
+                        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+                            <a
+                                href="https://www.crunchbase.com/organization/bolchat"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2.5 px-5 py-3 rounded-xl border border-slate-100 bg-white hover:border-slate-200 hover:shadow-sm transition-all group"
+                                aria-label="BolChat on Crunchbase"
+                            >
+                                <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M21.6 0H2.4C1.08 0 0 1.08 0 2.4v19.2C0 22.92 1.08 24 2.4 24h19.2c1.32 0 2.4-1.08 2.4-2.4V2.4C24 1.08 22.92 0 21.6 0zM7.2 18H4.8V9.6h2.4V18zm-1.2-9.6c-.77 0-1.4-.63-1.4-1.4s.63-1.4 1.4-1.4 1.4.63 1.4 1.4-.63 1.4-1.4 1.4zM19.2 18h-2.4v-4.68c0-.9-.72-1.62-1.62-1.62s-1.62.72-1.62 1.62V18H11.1V9.6h2.4v1.08c.66-.84 1.68-1.38 2.82-1.38 1.98 0 3.6 1.62 3.6 3.6V18z"/>
+                                </svg>
+                                <span className="text-sm font-semibold text-slate-600 group-hover:text-slate-900 transition-colors">Crunchbase</span>
+                            </a>
+                            {/* Add more directory badges here as you get listed */}
                         </div>
                     </section>
 

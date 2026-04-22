@@ -1,0 +1,354 @@
+# BolChat — SEO & Growth Strategy (Parts 6–9)
+
+---
+
+## PART 6 — 90-Day Ranking Roadmap
+
+### Month 1 — Foundation & Indexing (Weeks 1–4)
+
+**Technical Fixes (Week 1 — do these first):**
+- [ ] Fix `robots.txt` domain comment inconsistency (`bolchat.ai` → `bolchat.tech`)
+- [ ] Create `/public/og-image.png` (1200×630) — required for social + GSC rich results
+- [ ] Add canonical metadata to every `page.tsx` (pricing, features, blog, docs, contact, demo)
+- [ ] Add GSC verification code to `layout.tsx`
+- [ ] Submit fresh sitemap in Google Search Console
+- [ ] Request indexing for homepage, pricing, features, demo, contact manually in GSC
+- [ ] Add FAQ JSON-LD schema to homepage
+- [ ] Ensure all blog URLs in sitemap have real content (min. 800 words) or remove them
+
+**Content (Week 2–4):**
+- [ ] Publish 2 high-quality blog posts (target: "AI agent for website" + "multilingual customer support chatbot")
+- [ ] Flesh out all 5 existing blog stubs to min. 800 words each with internal links and CTAs
+- [ ] Create `/integrations` page with real content (not a placeholder)
+- [ ] Create `/demo` page with a proper booking embed (Calendly or similar)
+
+**Authority Building (Month 1):**
+- [ ] Submit to Crunchbase, Product Hunt, G2, Capterra, SaaSHub, BetaList, Indie Hackers
+- [ ] Create LinkedIn Company Page + post 3 product updates
+- [ ] Post Product Hunt launch (get 200+ upvotes for DA link + brand mentions)
+
+**Search Console Actions:**
+- Submit sitemap
+- Request indexing for all key pages manually (URL Inspection tool)
+- Check Core Web Vitals report — fix any "Poor" URLs
+
+---
+
+### Month 2 — Content Velocity & Keyword Capture (Weeks 5–8)
+
+**Pages to Create:**
+- [ ] `/compare/bolchat-vs-intercom` — 1500+ words, full comparison table
+- [ ] `/compare/bolchat-vs-tidio` — 1200+ words
+- [ ] `/solutions/ai-support-for-ecommerce` — 1000+ words, industry-specific
+- [ ] `/solutions/ai-support-for-saas` — 1000+ words
+- [ ] `/features/multilingual-ai-agent` — 1200+ words, targets "multilingual AI agent" keyword
+
+**Blog Posts (publish 4 this month):**
+1. "How to Add an AI Agent to Your Website (Step-by-Step)" — targets high-volume how-to query
+2. "AI Agent vs Chatbot: What's the Real Difference in 2026?" — informational, links to compare pages
+3. "Top 7 Benefits of Multilingual Customer Support for Global Businesses"
+4. "How to Reduce Support Tickets by 60% with AI Automation"
+
+**Backlink Plan:**
+- [ ] Reach out to 10 SaaS-focused blogs for guest post pitches
+- [ ] Get listed on AlternativeTo.net (for each competitor you listed)
+- [ ] Submit to AI tool directories: Futurepedia, There's An AI For That, AI Tools Directory
+- [ ] Offer a free plan/trial to 5 micro-influencers (SaaS founders on X/LinkedIn) in exchange for honest reviews with links
+
+**Search Console Actions:**
+- Monitor which pages moved from "Discovered" to "Crawled but not indexed" — that's progress
+- Check for any manual actions or coverage errors
+- Identify top-5 queries you're getting impressions for but low CTR → improve title tags for those pages
+
+---
+
+### Month 3 — Authority, Rankings & Conversion (Weeks 9–12)
+
+**Pages to Create:**
+- [ ] `/compare/bolchat-vs-zendesk`
+- [ ] `/compare/bolchat-vs-freshchat`
+- [ ] `/solutions/ai-support-for-edtech`
+- [ ] `/solutions/ai-support-for-agencies`
+- [ ] `/features/ai-customer-support-automation` — deep-dive feature page
+- [ ] `/features/lead-capture-chatbot`
+
+**Blog Posts (publish 4 this month):**
+1. "BolChat vs Intercom: Which AI Support Tool is Right for You?" (links to compare page)
+2. "The Complete Guide to AI Customer Support Automation in 2026"
+3. "Best Multilingual Chatbot Platforms Compared [2026 Edition]"
+4. "How RAG-Powered AI Agents Prevent Hallucinations in Customer Support"
+
+**Backlink Plan:**
+- [ ] Land 2 guest posts on DA40+ SaaS/startup blogs
+- [ ] Get a mention in at least 1 "best AI customer support tools" roundup article
+- [ ] Reach out to podcasts in the SaaS/startup space for founder interviews (brand mentions)
+
+**Search Console Actions:**
+- Export all queries with impressions but 0 clicks → update meta descriptions for those pages
+- Track rank movement for your 10 primary keywords
+- Set up automated GSC alerts for sudden drops
+
+---
+
+## PART 7 — 100 Target Keywords
+
+### 🔴 Transactional (High Commercial Intent — Buy/Sign Up)
+
+1. AI customer support software
+2. best AI chatbot for website
+3. multilingual chatbot software
+4. AI support agent platform
+5. automated customer service software
+6. buy AI chatbot for website
+7. AI agent pricing plans
+8. customer support automation tool
+9. AI live chat software
+10. chatbot software for small business
+11. website chat widget with AI
+12. conversational AI platform pricing
+13. enterprise AI customer service platform
+14. AI agent for SaaS support
+15. multilingual support software for ecommerce
+16. AI ticketing system alternative
+17. AI chat support for startups
+18. automated lead capture chatbot
+19. AI customer service tool free trial
+20. add AI chatbot to website
+
+---
+
+### 🟠 Commercial Investigation (Researching Before Buying)
+
+21. best AI agents for customer support 2026
+22. top multilingual chatbot platforms
+23. AI chatbot vs human support
+24. AI agent vs chatbot difference
+25. best intercom alternatives
+26. intercom vs AI agent
+27. tidio alternatives for growing businesses
+28. zendesk AI vs alternatives
+29. freshchat competitors
+30. crisp chat alternative
+31. AI-powered live chat comparison
+32. customer support AI platform comparison
+33. how to automate customer support with AI
+34. multilingual customer support software review
+35. AI agent platform for ecommerce
+36. best AI support tools for SaaS companies
+37. AI customer service platform features
+38. website AI agent review
+39. AI chatbot with CRM integration
+40. RAG-powered customer support AI
+
+---
+
+### 🟡 Comparison (Competitor Attack — High Conversion)
+
+41. bolchat vs intercom
+42. bolchat vs tidio
+43. bolchat vs zendesk
+44. bolchat vs freshchat
+45. bolchat vs crisp
+46. bolchat vs drift
+47. intercom alternative for multilingual support
+48. tidio alternative with AI agents
+49. zendesk alternative for startups
+50. freshchat alternative free
+51. drift alternative 2026
+52. best intercom alternative for small business
+53. cheaper alternative to zendesk AI
+54. crisp chat alternative with AI
+55. Gorgias alternative for ecommerce
+56. Helpscout alternative AI
+57. LiveChat alternative with automation
+58. Olark alternative with lead capture
+59. AI support chatbot better than Intercom
+60. autonomous AI support vs rule-based chatbot
+
+---
+
+### 🔵 Informational (Top-of-Funnel, Blog Content)
+
+61. what is an AI agent for websites
+62. how does AI customer support work
+63. what is multilingual customer support
+64. how to reduce support tickets with AI
+65. AI chatbot vs AI agent explained
+66. how to add AI chat to website
+67. RAG AI explained for business owners
+68. what is conversational AI
+69. benefits of AI customer support
+70. how to automate lead capture on website
+71. what languages does AI chatbot support
+72. how does AI knowledge base work
+73. AI customer support statistics 2026
+74. how to train an AI chatbot with your data
+75. customer support automation best practices
+76. human handoff in AI chat explained
+77. how to improve customer response time with AI
+78. AI support agent setup guide
+79. multilingual chatbot use cases
+80. how AI agents resolve support queries
+
+---
+
+### 🟢 Low-Competition Startup Keywords (Rank Fast)
+
+81. AI agent for website chat widget
+82. multilingual AI support widget
+83. autonomous AI customer service agent
+84. AI support agent for edtech
+85. AI chatbot for real estate website
+86. AI customer support for D2C brands
+87. multilingual chatbot for Indian businesses
+88. AI support tool for bootstrapped startups
+89. no-code AI chatbot for website
+90. AI lead capture chatbot for website
+91. AI FAQ bot for website
+92. knowledge base AI agent
+93. private AI chatbot for business
+94. AI customer support without coding
+95. website AI agent 50 languages
+96. AI support for global ecommerce
+97. AI customer agent for Webflow site
+98. AI chat widget for Framer website
+99. automated support agent for Shopify
+100. BolChat AI agent review
+
+---
+
+## PART 8 — Competitor Attack Plan
+
+### Competitive Landscape Analysis
+
+| Competitor | Weakness to Exploit | BolChat Angle |
+|---|---|---|
+| **Intercom** | Extremely expensive ($74–$400+/mo). No real multilingual. AI is add-on. | "Get Intercom-level power at a fraction of the cost, with native 50-language support built in." |
+| **Tidio** | Rule-based chatbot at core. AI is shallow. No multilingual depth. | "Tidio answers. BolChat resolves. There's a difference." |
+| **Zendesk AI** | Enterprise-only pricing. Complex setup. AI bolted onto legacy ticketing. | "Zendesk was built for tickets. BolChat was built for resolutions." |
+| **Drift** | Pivoted to revenue/ABM. Support is secondary. Very expensive. | "Drift forgot about support. We didn't." |
+| **Freshchat** | Buggy UX reported by users. Weak AI capabilities. | "Freshchat promises AI. BolChat delivers autonomous resolution." |
+| **Crisp** | Great for small teams, but no AI depth. No multilingual at scale. | "Crisp is great for chat. BolChat is great for resolutions." |
+
+---
+
+### Tactical SEO Attack
+
+**Step 1: Create comparison pages (these rank fast for "BolChat vs X" searches as your brand grows):**
+
+- Target: `bolchat vs intercom`, `intercom alternative multilingual`, `cheaper intercom alternative`
+- Format: Side-by-side table + honest pros/cons + clear winner recommendation
+
+**Comparison page structure (replicate for each competitor):**
+```
+H1: BolChat vs [Competitor] — Which AI Support Tool is Right for You? (2026)
+H2: Quick Verdict
+H2: Feature Comparison Table
+H2: Pricing Comparison
+H2: Who Should Choose [Competitor]
+H2: Who Should Choose BolChat
+H2: Customer Reviews & Ratings
+H2: Final Verdict
+FAQ Schema markup
+CTA: Book a BolChat Demo
+```
+
+**Step 2: Target their brand keywords with blog content**
+
+Write articles like:
+- "Best Intercom Alternatives in 2026 (Ranked and Reviewed)"
+- "Zendesk Too Expensive? Here Are 7 AI-Powered Alternatives"
+- "Tidio vs BolChat: A Founder's Honest Comparison"
+
+These rank for competitor brand searches where users are already considering switching.
+
+**Step 3: List on AlternativeTo.net for every competitor**
+
+Go to AlternativeTo.net → search each competitor → "Add Alternative" → add BolChat. This gets you listed in every competitor's alternatives page (free, high-DA links, high commercial intent traffic).
+
+**Step 4: G2 & Capterra reviews**
+
+Get 10 real reviews on G2 and Capterra. These appear in Google's "Explore more" results for software category searches. This also gets you onto "Top alternatives to Intercom" type pages organically.
+
+---
+
+## PART 9 — Conversion Optimization
+
+### What's Currently Hurting Trust (Brutal Audit)
+
+| Issue | Why It Hurts |
+|---|---|
+| "Trusted by founders from 500+ startups" with stock photos | Immediately feels fake. Stock photos of "founders" destroy trust faster than no social proof at all. |
+| No logo wall of real customers | Absence of logos = no proof of adoption. Even 5 real logos beat 0. |
+| CTA "Request Demo" goes to `/contact` page | This is a friction killer. A contact form is not a demo. Use Calendly or a dedicated demo booking page. |
+| No pricing visible on homepage | Visitors assume it's expensive. Show at least a starting price or "Free plan available" signal. |
+| No review scores (G2, Capterra, Product Hunt) | These are trust signals that B2B buyers look for before clicking demo. |
+| Hero subheadline is generic | "resolve queries, capture leads, and grow your business" could be ANY chatbot. |
+| No video demo or animated GIF | B2B SaaS buyers want to see the product before booking. |
+| `/robots.txt` comment says `bolchat.ai` | Signals to technical visitors that the site isn't fully production-ready. |
+| Blog posts are in sitemap but may not have real content | If a prospect clicks a blog link and gets a stub page, trust dies instantly. |
+
+---
+
+### What to Add for More Demo Bookings
+
+**Immediately (this week):**
+
+1. **Replace stock avatars with real names + real photos** — Even 3 real beta users with names and job titles converts 3× better than "Trusted by 500+ startups" with Unsplash photos.
+
+2. **Add a "Watch 2-min Demo" button** — Record a Loom walkthrough of BolChat resolving a real query. Embed on homepage. This single change typically lifts demo bookings by 20–40%.
+
+3. **Dedicated `/demo` page with Calendly embed** — Not a contact form. A calendar. This is the #1 conversion fix for B2B SaaS. Add:
+   - What you'll see in the demo (3 bullet points)
+   - Who it's for
+   - Calendly embed
+   - Social proof below
+
+4. **Add a pricing anchor on homepage** — Something like: "Plans from $0/month — no credit card required" near the CTA. Removes the biggest objection.
+
+5. **Add G2/Product Hunt badge** — Even if you're new, "4.9/5 on Product Hunt" or "Loved on G2" signals legitimacy.
+
+**Within 30 days:**
+
+6. **Add a sticky CTA bar** — After scrolling past the hero, a sticky header/bar saying "Book Free Demo →" keeps the conversion action visible.
+
+7. **Exit-intent popup** — "Before you go — see BolChat resolve a query in 60 seconds." Link to the Loom demo. Captures 3–5% of exits.
+
+8. **Case study / results section** — Even one real result ("Acme reduced support volume by 65% in 14 days") with a quote beats any feature list.
+
+9. **"How it compares" section on pricing page** — A simple table showing BolChat vs Intercom vs Tidio on price, languages, and resolution rate anchors your value.
+
+10. **ROI calculator** — "Enter your monthly support tickets → See how much BolChat saves you." Interactive tools generate 3× more qualified leads than static CTAs.
+
+---
+
+### Copy Elements That Reduce Trust (Fix These)
+
+| Current | Replace With |
+|---|---|
+| "BolChat isn't just a toy." | Remove. Never downplay yourself. Say what you ARE, not what you're not. |
+| "It's a highly strict infrastructure" | Replace with: "Production-grade AI agent infrastructure trusted by fast-growing teams." |
+| "Everything you need to launch." | Too vague. Replace with: "Every tool to automate, resolve, and grow." |
+| Generic feature names ("Total Styling", "Auto-Leads") | Use searchable names: "Branded Chat Widget", "Automated Lead Capture to CRM" |
+| "Autonomous AI agents that resolve queries" (repeated 3× on homepage) | Vary phrasing. Repetition signals thin copy to Google and readers. |
+
+---
+
+## Quick-Win Priority Matrix
+
+| Action | Effort | Impact | Do First? |
+|---|---|---|---|
+| Fix robots.txt domain inconsistency | 5 min | High | ✅ Yes |
+| Create og-image.png | 30 min | High | ✅ Yes |
+| Add canonical to every page | 1 hr | High | ✅ Yes |
+| Submit sitemap to GSC + request indexing | 15 min | High | ✅ Yes |
+| Add FAQ schema to homepage | 1 hr | Medium | ✅ Yes |
+| Replace stock avatars with real social proof | 2 hrs | High | ✅ Yes |
+| Create dedicated /demo page with Calendly | 2 hrs | Very High | ✅ Yes |
+| Flesh out all blog stubs to 800+ words | 1 day | High | Week 1 |
+| Create /compare/bolchat-vs-intercom | 3 hrs | High | Week 2 |
+| Get Crunchbase + G2 + Product Hunt listed | 1 hr | High | Week 1 |
+| Record 2-min Loom demo video | 1 hr | Very High | Week 1 |
+| Create /integrations page | 3 hrs | Medium | Week 2 |
+| Write 4 blog posts (Month 1) | 1 week | High | Month 1 |
+| Reach out for 2 guest posts | Ongoing | Very High | Month 2 |

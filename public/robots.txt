@@ -1,12 +1,22 @@
-# BolChat — https://bolchat.ai
+# BolChat — https://bolchat.tech
 # Allow all web crawlers full access
 
 User-agent: *
 Allow: /
 
-# Block access to Next.js internals
+# Block access to Next.js internals and CDN cache paths
 Disallow: /_next/
+Disallow: /_next/static/
 Disallow: /api/
+Disallow: /cdn-cgi/
+
+# Optional: block AI training crawlers to protect proprietary content
+# Remove these lines if you want AI-generated summaries of your content
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
 
 # Sitemap location — submitted to Google Search Console
-Sitemap: https://bolchat.ai/sitemap.xml
+Sitemap: https://bolchat.tech/sitemap.xml

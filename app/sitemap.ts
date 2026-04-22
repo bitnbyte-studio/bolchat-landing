@@ -4,11 +4,12 @@ const SITE_URL = "https://bolchat.tech";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
+        // ── Core pages ────────────────────────────────────────────────
         {
             url: SITE_URL,
             lastModified: new Date(),
             changeFrequency: "weekly",
-            priority: 1,
+            priority: 1.0,
         },
         {
             url: `${SITE_URL}/features`,
@@ -23,11 +24,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/demo`,
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.95,
+        },
+        {
+            url: `${SITE_URL}/docs`,
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 0.9,
+        },
+        {
+            url: `${SITE_URL}/contact`,
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/about`,
             lastModified: new Date(),
             changeFrequency: "monthly",
-            priority: 0.7,
+            priority: 0.6,
         },
+
+        // ── Blog hub + posts ──────────────────────────────────────────
         {
             url: `${SITE_URL}/blog`,
             lastModified: new Date(),
@@ -64,20 +85,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "monthly",
             priority: 0.7,
         },
-        {
-            url: `${SITE_URL}/docs`,
-            lastModified: new Date(),
-            changeFrequency: "weekly",
-            priority: 0.9,
-        },
-        {
-            url: `${SITE_URL}/contact`,
-            lastModified: new Date(),
-            changeFrequency: "monthly",
-            priority: 0.9,
-        },
     ];
 }
-
-
-

@@ -6,8 +6,18 @@ import { BreadcrumbJsonLd } from "../components/BreadcrumbJsonLd";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Contact Sales | BolChat",
-    description: "Get in touch with our team to see how BolChat can scale your customer support operations 10x.",
+    title: "Contact BolChat — Talk to Our Team About AI Customer Support",
+    description:
+        "Have a question or want to explore BolChat for your team? Reach out to discuss multilingual AI support automation, pricing, or a custom demo. We respond within hours.",
+    alternates: {
+        canonical: "https://bolchat.tech/contact",
+    },
+    openGraph: {
+        title: "Contact BolChat — Talk to Our Team",
+        description:
+            "Reach out to the BolChat team to discuss AI customer support automation, pricing, or a personalized demo for your business.",
+        url: "https://bolchat.tech/contact",
+    },
 };
 
 export default async function ContactPage({
@@ -77,7 +87,7 @@ export default async function ContactPage({
                         <div className="pt-2 md:pt-4">
                             <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] md:leading-[1.05] mb-5 sm:mb-8">
                                 Let's optimize your <br className="hidden lg:block" />
-                                <span className="text-rose-500">support architecture.</span>
+                                <span className="text-rose-500">AI support strategy.</span>
                             </h1>
 
                             <p className="text-[15px] sm:text-lg md:text-xl text-slate-600 font-medium leading-relaxed mb-8 sm:mb-12 max-w-xl">
