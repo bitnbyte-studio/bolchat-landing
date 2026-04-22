@@ -60,7 +60,7 @@ export default function BlogPost() {
                             <p>Most AI agent reviews focus on enterprise use cases — massive ticket volumes, complex integrations, dedicated IT teams. Small businesses have different priorities:</p>
                             <ul className="mt-4 space-y-3">
                                 {[
-                                    ["Fast setup", "You don't have an engineering team. The tool needs to work in under 30 minutes."],
+                                    ["Fast setup", "You don't have an engineering team. The tool needs to work in under 10 minutes."],
                                     ["Multilingual support", "If you sell globally — or plan to — your AI agent must speak your customers' language natively."],
                                     ["Lead capture", "Every visitor is a potential customer. Your AI should capture contact details automatically."],
                                     ["Affordable pricing", "Enterprise tools like Intercom start at $74/month and scale to hundreds. Small businesses need value from day one."],
@@ -85,7 +85,7 @@ export default function BlogPost() {
                                     name: "BolChat",
                                     badge: "Best for Multilingual + Lead Capture",
                                     badgeColor: "bg-rose-50 text-rose-600",
-                                    pros: ["50+ languages natively — no translation plugins", "Private RAG knowledge base — zero hallucinations", "Automated lead capture to CRM", "Single script tag — live in 30 minutes", "Free starter plan available"],
+                                    pros: ["50+ languages natively — no translation plugins", "Private RAG knowledge base — zero hallucinations", "Automated lead capture to CRM", "Single script tag — live in under 10 minutes", "Free starter plan available"],
                                     cons: ["Newer platform — still building comparison pages"],
                                 },
                                 {
@@ -142,7 +142,7 @@ export default function BlogPost() {
                             <p className="text-[10.5px] font-medium tracking-[0.12em] uppercase text-rose-400 mb-3">Built for small teams with global ambitions</p>
                             <h2 className="text-[1.25rem] font-medium tracking-[-0.02em] text-white mb-3">BolChat — AI Agent for Small Businesses</h2>
                             <p className="text-[0.875rem] leading-[1.7] text-slate-400 max-w-sm mx-auto mb-6">
-                                Start free. Go live in 30 minutes. Resolve customer queries in 50+ languages without hiring a single additional support rep.
+                                Start free. Go live in under 10 minutes. Resolve customer queries in 50+ languages without hiring a single additional support rep.
                             </p>
                             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[0.75rem] text-slate-500 font-medium tracking-wide">
                                 <span>Free to start</span>

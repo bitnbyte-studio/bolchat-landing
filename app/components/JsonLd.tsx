@@ -103,7 +103,7 @@ const faqSchema = {
             name: "How long does BolChat setup take?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Most teams are live in under 30 minutes. Connect your knowledge base, configure your AI agent persona, and embed a single script tag — no engineering resources required.",
+                text: "Most teams are live in under 10 minutes. Connect your knowledge base, configure your AI agent persona, and embed a single script tag — no engineering resources required.",
             },
         },
         {

@@ -10,7 +10,7 @@ import { BreadcrumbJsonLd } from "../../components/BreadcrumbJsonLd";
 export const metadata: Metadata = {
     title: "How to Add an AI Agent to Your Website (Step-by-Step Guide 2026)",
     description:
-        "Learn how to add an AI agent to your website in under 30 minutes. Step-by-step guide covering knowledge base setup, agent configuration, and embedding on Next.js, WordPress, Webflow, and Shopify.",
+        "Learn how to add an AI agent to your website in under 10 minutes. Step-by-step guide covering knowledge base setup, agent configuration, and embedding on Next.js, WordPress, Webflow, and Shopify.",
     alternates: { canonical: "https://bolchat.tech/blog/how-to-add-ai-chatbot-to-website" },
     openGraph: {
         title: "How to Add an AI Agent to Your Website (Step-by-Step Guide 2026)",
@@ -49,7 +49,7 @@ export default function BlogPost() {
                             How to Add an AI Agent to Your Website (Step-by-Step Guide)
                         </h1>
                         <p className="text-[1.05rem] leading-[1.75] text-slate-500">
-                            Adding an AI agent to your website used to require an engineering team, weeks of development, and significant budget. In 2026, you can deploy a fully functional autonomous AI agent in under 30 minutes — with no code required. This guide walks you through every step.
+                            Adding an AI agent to your website used to require an engineering team, weeks of development, and significant budget. In 2026, you can deploy a fully functional autonomous AI agent in under 10 minutes with no code required. This guide walks you through every step.
                         </p>
                     </header>
 
@@ -167,7 +167,7 @@ export default function BlogPost() {
                             <p className="text-[10.5px] font-medium tracking-[0.12em] uppercase text-rose-400 mb-3">Ready to deploy?</p>
                             <h2 className="text-[1.25rem] font-medium tracking-[-0.02em] text-white mb-3">Get BolChat on your website today</h2>
                             <p className="text-[0.875rem] leading-[1.7] text-slate-400 max-w-sm mx-auto mb-6">
-                                Free to start. Live in under 30 minutes. Resolves queries in 50+ languages autonomously.
+                                Free to start. Live in under 10 minutes. Resolves queries in 50+ languages autonomously.
                             </p>
                             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[0.75rem] text-slate-500 font-medium tracking-wide">
                                 <span>No credit card</span>
@@ -196,7 +196,7 @@ export default function BlogPost() {
                         </div>
 
                         <div className="border-t border-slate-100 pt-10 text-center">
-                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-2">Start for free in 30 minutes</h2>
+                            <h2 className="text-[1.1rem] font-medium tracking-[-0.02em] text-slate-900 mb-2">Start for free in under 10 minutes</h2>
                             <p className="text-[0.875rem] text-slate-400 mb-7">Book a demo and we&apos;ll walk through the setup live — configured for your specific website and use case.</p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                                 <Link href="/demo" className="w-full sm:w-auto rounded-xl bg-rose-500 px-8 py-3.5 text-[0.875rem] font-medium text-white hover:bg-rose-600 transition-colors">

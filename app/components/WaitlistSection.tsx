@@ -10,7 +10,7 @@ const benefits = [
     "Captures leads without interrupting the conversation",
     "RAG-powered private knowledge base — zero hallucinations",
     "Human handoff with full context when it matters",
-    "Deploys in under 30 minutes — no engineering required",
+    "Deploys in under 10 minutes — no engineering required",
 ];
 
 export function CTASection() {

@@ -53,9 +53,6 @@ export function Footer() {
                             <li className="transition-colors hover:text-rose-500">
                                 <Link href="/about">About Us</Link>
                             </li>
-                            <li className="transition-colors hover:text-rose-500">
-                                <Link href="/contact">Contact Sales</Link>
-                            </li>
                         </ul>
                     </div>
 
@@ -68,9 +65,11 @@ export function Footer() {
                             <li className="transition-colors hover:text-rose-500">
                                 <Link href="/docs">Documentation</Link>
                             </li>
+                            {/* Developer API — coming soon
                             <li className="transition-colors hover:text-rose-500">
                                 <a href="https://docs.bolchat.tech" target="_blank" rel="noopener noreferrer">Developer API</a>
                             </li>
+                            */}
                             <li className="transition-colors hover:text-rose-500">
                                 <Link href="/privacy">Privacy Policy</Link>
                             </li>
@@ -84,8 +83,7 @@ export function Footer() {
                 <div className="flex flex-col items-center justify-between gap-6 border-t border-slate-200/60 pt-8 text-sm font-medium text-slate-400 md:flex-row md:pt-12">
                     <p>© 2026 BolChat AI. All rights reserved.</p>
                     <div className="flex gap-8">
-                        <Link href="/contact" className="hover:text-rose-500">Support</Link>
-                        <a href="https://status.bolchat.tech" className="hover:text-rose-500">System Status</a>
+                        <Link href="/demo" className="hover:text-rose-500">Support</Link>
                     </div>
                 </div>
             </Container>

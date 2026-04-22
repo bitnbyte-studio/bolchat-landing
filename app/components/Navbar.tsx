@@ -13,7 +13,7 @@ const NAV_LINKS = [
     { label: "About", href: "/about" },
     { label: "Blog", href: "/blog" },
     { label: "Docs", href: "/docs" },
-    { label: "Contact", href: "/contact" },
+    { label: "Demo", href: "/demo" },
 ];
 
 export function Navbar() {
@@ -45,11 +45,11 @@ export function Navbar() {
     return (
         <header
             className={[
-                "fixed inset-x-0 top-0 z-50 transition-transform duration-300 ease-in-out",
+                "fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-in-out bg-white/90 backdrop-blur-xl",
                 visible ? "translate-y-0" : "-translate-y-full",
                 scrolled
-                    ? "border-b border-rose-100/60 bg-white/80 shadow-sm shadow-rose-100/20 backdrop-blur-xl"
-                    : "bg-transparent",
+                    ? "border-b border-slate-100 shadow-sm shadow-slate-100/40"
+                    : "border-b border-transparent",
             ].join(" ")}
         >
             <Container as="nav" className="flex h-20 items-center justify-between">
@@ -79,7 +79,7 @@ export function Navbar() {
                 {/* ── CTA buttons (Desktop) ── */}
                 <div className="hidden items-center gap-6 lg:flex">
                     <Link
-                        href="/contact"
+                        href="/demo"
                         className="group inline-flex items-center gap-2 rounded-2xl bg-slate-900 px-6 py-3 text-sm font-bold text-white shadow-xl shadow-slate-900/10 transition-all hover:bg-slate-800 hover:shadow-slate-900/20 active:scale-[0.98]"
                     >
                         Book a Demo
@@ -90,7 +90,7 @@ export function Navbar() {
                 {/* ── Mobile Menu Toggle ── */}
                 <div className="flex items-center gap-4 lg:hidden">
                     <Link
-                        href="/contact"
+                        href="/demo"
                         className="rounded-xl bg-slate-900 px-4 py-2 text-xs font-bold text-white shadow-md active:scale-95"
                     >
                         Demo
@@ -120,7 +120,7 @@ export function Navbar() {
                         ))}
                         <div className="pt-4 flex flex-col gap-4">
                             <Link
-                                href="/contact"
+                                href="/demo"
                                 onClick={() => setMobileMenuOpen(false)}
                                 className="flex h-14 items-center justify-center rounded-2xl bg-slate-900 font-bold text-white"
                             >

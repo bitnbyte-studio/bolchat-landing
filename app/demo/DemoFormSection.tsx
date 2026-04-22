@@ -11,8 +11,8 @@ const DEMO_HIGHLIGHTS = [
         ),
         bg: "bg-rose-50",
         color: "text-rose-500",
-        title: "Live Chatbot Setup",
-        desc: "Watch a chatbot being configured with your data in real-time.",
+        title: "Live Agent Setup",
+        desc: "Watch an AI agent being configured with your data in real-time.",
     },
     {
         icon: (

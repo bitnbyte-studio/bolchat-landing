@@ -23,7 +23,7 @@ const steps = [
     },
     {
         step: "03",
-        title: "Go Live in Under 30 Minutes",
+        title: "Go Live in Under 10 Minutes",
         description: "Paste a single `<script>` tag on your site. Your AI agent starts resolving customer queries, capturing leads, and escalating intelligently — 24/7.",
         icon: Code,
         color: "text-emerald-600",
@@ -41,7 +41,7 @@ export function HowItWorksSection() {
                     </p>
                     <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 md:text-5xl mb-3 md:mb-4">
                         From setup to first resolved query{" "}
-                        <span className="text-rose-500">in under 30 minutes.</span>
+                        <span className="text-rose-500">in under 10 minutes.</span>
                     </h2>
                     <p className="text-[15px] sm:text-lg text-slate-600 max-w-2xl mx-auto px-4 md:px-0 font-medium">
                         No complex onboarding. No engineering sprint. BolChat integrates with your existing stack in three steps.

@@ -12,20 +12,15 @@ export function HeroSection() {
                 {/* ── Left: Copy ── */}
                 <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
 
-                    {/* Category pill */}
-                    <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-4 py-1.5 text-sm font-semibold text-rose-600">
-                        <span className="h-1.5 w-1.5 rounded-full bg-rose-500 animate-pulse" />
-                        AI Agent for Website Customer Support
-                    </div>
 
-                    <h1 className="mb-5 text-[2.5rem] font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-7xl">
+                    <h1 className="mb-5 text-[1.75rem] font-bold leading-[1.15] tracking-tight sm:text-5xl lg:text-7xl">
                         Your Website&apos;s AI Support Agent.
-                        <span className="block bg-gradient-to-r from-rose-500 to-orange-400 bg-clip-text text-transparent">
+                        <span className="block pb-2 bg-gradient-to-r from-rose-500 to-orange-400 bg-clip-text text-transparent">
                             Speaks Every Language.
                         </span>
                     </h1>
 
-                    <p className="mb-8 max-w-[20rem] sm:max-w-xl text-[17px] leading-relaxed text-slate-600 sm:text-xl">
+                    <p className="mb-8 max-w-[18rem] sm:max-w-xl text-[15px] leading-relaxed text-slate-600 sm:text-xl">
                         BolChat deploys autonomous AI agents on your website that resolve customer queries,
                         capture leads, and escalate to humans — in 50+ languages, 24/7.
                         No extra headcount needed.

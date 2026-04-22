@@ -129,7 +129,7 @@ export default function BlogPost() {
                             <p className="text-[10.5px] font-medium tracking-[0.12em] uppercase text-rose-400 mb-3">Built for resolution, not deflection</p>
                             <h2 className="text-[1.25rem] font-medium tracking-[-0.02em] text-white mb-3">BolChat — Autonomous AI Agent for Websites</h2>
                             <p className="text-[0.875rem] leading-[1.7] text-slate-400 max-w-sm mx-auto mb-6">
-                                50+ languages. Private RAG knowledge base. Lead capture. Human fallback. One script tag. Live in 30 minutes.
+                                50+ languages. Private RAG knowledge base. Lead capture. Human fallback. One script tag. Live in under 10 minutes.
                             </p>
                             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[0.75rem] text-slate-500 font-medium tracking-wide">
                                 <span>Autonomous resolution</span>

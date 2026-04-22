@@ -101,9 +101,9 @@ export function ChatScreen() {
     }, [messages, isTyping]);
 
     return (
-        <div className="relative w-full max-w-[420px] -mt-20 mx-auto">
+        <div className="relative w-full max-w-[420px] -mt-30 mx-auto">
             {/* Main Chat Card */}
-            <div className="flex flex-col h-[520px] rounded-[24px] border border-slate-200/60 bg-white overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] relative z-10">
+            <div className="flex flex-col h-[560px] rounded-[24px] border border-slate-200/60 bg-white overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] relative z-10">
 
                 {/* Top bar */}
                 <div className="flex-none flex items-center gap-3 px-5 py-4 border-b border-slate-100 bg-white z-20">

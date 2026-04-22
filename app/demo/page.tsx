@@ -4,7 +4,6 @@ import { Footer } from "../components/Footer";
 import { DemoHero } from "./DemoHero";
 import { DemoFormSection } from "./DemoFormSection";
 import { ContactCardsSection } from "./ContactCardsSection";
-import { OfficesSection } from "./OfficesSection";
 import { TestimonialsSection } from "./TestimonialsSection";
 import { FaqSection } from "./FaqSection";
 import { FinalCtaSection } from "./FinalCtaSection";
@@ -12,14 +11,14 @@ import { FinalCtaSection } from "./FinalCtaSection";
 export const metadata: Metadata = {
     title: "Book a BolChat Demo — See AI Support Automation in Action",
     description:
-        "Book a 30-minute personalized demo of BolChat. See how autonomous AI agents resolve customer queries in 50+ languages — live. Setup takes under 30 minutes. No credit card required.",
+        "Book a personalised demo of BolChat. See how autonomous AI agents resolve customer queries in 50+ languages — live. Setup takes under 10 minutes. No credit card required.",
     alternates: {
         canonical: "https://bolchat.tech/demo",
     },
     openGraph: {
         title: "Book a BolChat Demo — See AI Support Automation in Action",
         description:
-            "See BolChat's multilingual AI agent resolve real customer queries live. Book a free 30-minute personalized demo with our team.",
+            "See BolChat's multilingual AI agent resolve real customer queries live. Book a free 30-minute personalised demo with our team.",
         url: "https://bolchat.tech/demo",
     },
 };
@@ -37,7 +36,6 @@ export default function DemoPage() {
             <DemoHero />
             <DemoFormSection />
             <ContactCardsSection />
-            <OfficesSection />
             <TestimonialsSection />
             <FaqSection />
             <FinalCtaSection />

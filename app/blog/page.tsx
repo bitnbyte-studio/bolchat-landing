@@ -60,7 +60,7 @@ const posts = [
         date: "April 11, 2026",
         title: "How to Add an AI Agent to Your Website (Step-by-Step Guide 2026)",
         excerpt:
-            "A complete walkthrough: connect your knowledge base, configure your agent, and embed it on Next.js, WordPress, Webflow, or Shopify — in under 30 minutes.",
+            "A complete walkthrough: connect your knowledge base, configure your agent, and embed it on Next.js, WordPress, Webflow, or Shopify — in under 10 minutes.",
         readTime: "8 min read",
     },
     {

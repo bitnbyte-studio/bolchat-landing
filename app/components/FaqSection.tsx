@@ -15,7 +15,7 @@ const faqs = [
     },
     {
         q: "How long does setup take?",
-        a: "Most teams are live in under 30 minutes. Connect your knowledge base, configure your AI agent persona, and embed a single script tag — no engineering resources required. Works on any website, CMS, or web app.",
+        a: "Most teams are live in under 10 minutes. Connect your knowledge base, configure your AI agent persona, and embed a single script tag — no engineering resources required. Works on any website, CMS, or web app.",
     },
     {
         q: "Can I hand off conversations to a human agent?",

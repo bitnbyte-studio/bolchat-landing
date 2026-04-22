@@ -28,7 +28,7 @@ const tiers = [
         icon: Zap,
         tagline: "For early-stage startups and solo founders.",
         description:
-            "Get your AI agent live in under 30 minutes. Perfect for teams validating AI support automation for the first time.",
+            "Get your AI agent live in under 10 minutes. Perfect for teams validating AI support automation for the first time.",
         features: [
             "AI agent on your website",
             "Up to 2 languages",
@@ -213,7 +213,7 @@ export default function PricingPage() {
                 <Container maxWidth="max-w-4xl" className="mb-24">
                     <div className="rounded-3xl bg-white border border-slate-100 shadow-sm px-8 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                         <div>
-                            <p className="text-3xl font-extrabold text-slate-900 mb-1">30 min</p>
+                            <p className="text-3xl font-extrabold text-slate-900 mb-1">&lt; 10 min</p>
                             <p className="text-sm font-medium text-slate-500">Average time to go live</p>
                         </div>
                         <div>
