@@ -70,7 +70,7 @@ export function HeroSection() {
                     <div className="mt-8 flex flex-wrap gap-6">
                         {[
                             { value: "50+", label: "Languages" },
-                            { value: "< 30min", label: "Setup time" },
+                            { value: "< 10min", label: "Setup time" },
                             { value: "24/7", label: "Autonomous" },
                         ].map((stat) => (
                             <div key={stat.label} className="flex flex-col">

@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { Container } from "../components/Container";
+
+const WEB3FORMS_ACCESS_KEY = "d26f0cc5-1e1c-4e3d-9202-4fe5ebd0a5ab";
 
 const DEMO_HIGHLIGHTS = [
     {
@@ -53,19 +56,61 @@ const DEMO_HIGHLIGHTS = [
     },
 ];
 
-import { Container } from "../components/Container";
-
 export function DemoFormSection() {
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
 
-    const handleSubmit = (e: React.FormEvent) => {
+    // Form fields
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [company, setCompany] = useState("");
+    const [languages, setLanguages] = useState("1–5 Languages");
+    const [volume, setVolume] = useState("");
+    const [interests, setInterests] = useState<string[]>([]);
+    const [message, setMessage] = useState("");
+
+    const toggleInterest = (item: string) => {
+        setInterests((prev) =>
+            prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item]
+        );
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
-        setTimeout(() => {
-            setSubmitted(true);
+        setError("");
+
+        try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: { "Content-Type": "application/json", Accept: "application/json" },
+                body: JSON.stringify({
+                    access_key: WEB3FORMS_ACCESS_KEY,
+                    subject: `Demo Request: ${name} from ${company}`,
+                    from_name: "BolChat Demo Form",
+                    name,
+                    email,
+                    company,
+                    languages_needed: languages,
+                    support_volume: volume || "Not specified",
+                    priority_interests: interests.length > 0 ? interests.join(", ") : "Not specified",
+                    additional_details: message || "None",
+                }),
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                setSubmitted(true);
+            } else {
+                setError("Something went wrong. Please try again.");
+            }
+        } catch {
+            setError("Network error. Please try again.");
+        } finally {
             setLoading(false);
-        }, 800);
+        }
     };
 
     return (
@@ -93,6 +138,8 @@ export function DemoFormSection() {
                                     <input
                                         type="text"
                                         required
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
                                         placeholder="John Doe"
                                         className="h-14 w-full rounded-2xl border border-slate-100 bg-white px-6 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50"
                                     />
@@ -102,6 +149,8 @@ export function DemoFormSection() {
                                     <input
                                         type="email"
                                         required
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
                                         placeholder="john@company.com"
                                         className="h-14 w-full rounded-2xl border border-slate-100 bg-white px-6 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50"
                                     />
@@ -115,13 +164,19 @@ export function DemoFormSection() {
                                     <input
                                         type="text"
                                         required
+                                        value={company}
+                                        onChange={(e) => setCompany(e.target.value)}
                                         placeholder="Acme Corp"
                                         className="h-14 w-full rounded-2xl border border-slate-100 bg-white px-6 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50"
                                     />
                                 </div>
                                 <div>
                                     <label className="mb-2 block text-sm font-bold text-slate-700">Languages Needed</label>
-                                    <select className="h-14 w-full cursor-pointer appearance-none rounded-2xl border border-slate-100 bg-white px-6 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50">
+                                    <select
+                                        value={languages}
+                                        onChange={(e) => setLanguages(e.target.value)}
+                                        className="h-14 w-full cursor-pointer appearance-none rounded-2xl border border-slate-100 bg-white px-6 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50"
+                                    >
                                         <option>1–5 Languages</option>
                                         <option>6–15 Languages</option>
                                         <option>16–30 Languages</option>
@@ -136,7 +191,14 @@ export function DemoFormSection() {
                                 <div className="flex flex-wrap gap-5">
                                     {["<1K/month", "1–10K", "10–50K", "50K+"].map((v) => (
                                         <label key={v} className="flex cursor-pointer items-center gap-2">
-                                            <input type="radio" name="volume" className="h-4 w-4 accent-rose-500" />
+                                            <input
+                                                type="radio"
+                                                name="volume"
+                                                value={v}
+                                                checked={volume === v}
+                                                onChange={(e) => setVolume(e.target.value)}
+                                                className="h-4 w-4 accent-rose-500"
+                                            />
                                             <span className="text-sm text-slate-600">{v}</span>
                                         </label>
                                     ))}
@@ -149,7 +211,12 @@ export function DemoFormSection() {
                                 <div className="grid grid-cols-2 gap-3">
                                     {["Cost Reduction", "Speed & Efficiency", "Multilingual Support", "Integration Help"].map((item) => (
                                         <label key={item} className="flex cursor-pointer items-center gap-2">
-                                            <input type="checkbox" className="h-4 w-4 rounded accent-rose-500" />
+                                            <input
+                                                type="checkbox"
+                                                checked={interests.includes(item)}
+                                                onChange={() => toggleInterest(item)}
+                                                className="h-4 w-4 rounded accent-rose-500"
+                                            />
                                             <span className="text-sm text-slate-600">{item}</span>
                                         </label>
                                     ))}
@@ -160,10 +227,16 @@ export function DemoFormSection() {
                             <div>
                                 <label className="mb-2 block text-sm font-bold text-slate-700">Additional Details</label>
                                 <textarea
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
                                     placeholder="Tell us about your specific needs..."
                                     className="h-32 w-full resize-none rounded-2xl border border-slate-100 bg-white p-6 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50"
                                 />
                             </div>
+
+                            {error && (
+                                <p className="text-center text-sm font-medium text-red-500">{error}</p>
+                            )}
 
                             <button
                                 type="submit"

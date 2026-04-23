@@ -81,7 +81,7 @@ export function Footer() {
                 </div>
 
                 <div className="flex flex-col items-center justify-between gap-6 border-t border-slate-200/60 pt-8 text-sm font-medium text-slate-400 md:flex-row md:pt-12">
-                    <p>© 2026 BolChat AI. All rights reserved.</p>
+                    <p>© 2026 BolChat. All rights reserved.</p>
                     <div className="flex gap-8">
                         <Link href="/demo" className="hover:text-rose-500">Support</Link>
                     </div>
