@@ -7,23 +7,22 @@ import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
     return (
-        <section id="product" className="relative pb-8 pt-20 md:pb-16 md:pt-28">
+        <section id="product" className="relative pb-8 pt-28 md:pb-16 md:pt-36">
             <Container className="grid items-center gap-10 lg:grid-cols-2">
                 {/* ── Left: Copy ── */}
                 <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
 
 
-                    <h1 className="mb-5 text-[1.75rem] font-bold leading-[1.15] tracking-tight sm:text-5xl lg:text-7xl">
-                        Your Website&apos;s AI Support Agent.
+                    <h1 className="mb-5 text-[1.75rem] font-bold leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+                        AI Agents that Support &
                         <span className="block pb-2 bg-gradient-to-r from-rose-500 to-orange-400 bg-clip-text text-transparent">
-                            Speaks Every Language.
+                            Capture Leads.
                         </span>
                     </h1>
 
                     <p className="mb-8 max-w-[18rem] sm:max-w-xl text-[15px] leading-relaxed text-slate-600 sm:text-xl">
                         BolChat deploys autonomous AI agents on your website that resolve customer queries,
-                        capture leads, and escalate to humans — in 50+ languages, 24/7.
-                        No extra headcount needed.
+                        capture leads, and escalate to humans in 50+ languages. Available 24/7 with zero extra headcount.
                     </p>
 
                     <div className="flex w-full flex-col items-center gap-3 sm:flex-row lg:justify-start">
