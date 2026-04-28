@@ -165,13 +165,13 @@ export default function RootLayout({
         {children}
 
 
-        {/* <Script
-          src="http://127.0.0.1:8000/static/widget.js"
-          data-key="bc_live_rSSYbfZj.vsXPcrAHHMnqhowrrdZtFkh8hTnFWPqa"
+        <Script
+          src="https://server-farm-fqdvcndefdazdkb2.centralindia-01.azurewebsites.net/static/widget.js"
+          data-key="bc_live_0qIRsR2o.Vsiq4J3WoGK57d6Yf7JBwLcYNMIsV76F"
           data-agent="a90f62b5-5449-4677-a409-b150ff4ed89a"
-          data-api-url="http://127.0.0.1:8000"
+          data-api-url="https://server-farm-fqdvcndefdazdkb2.centralindia-01.azurewebsites.net"
           strategy="afterInteractive"
-        /> */}
+        />
       </body>
     </html>
   );
