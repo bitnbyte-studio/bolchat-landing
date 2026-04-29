@@ -81,9 +81,20 @@ export function Footer() {
                 </div>
 
                 <div className="flex flex-col items-center justify-between gap-6 border-t border-slate-200/60 pt-8 text-sm font-medium text-slate-400 md:flex-row md:pt-12">
-                    <p>© 2026 BolChat. All rights reserved.</p>
-                    <div className="flex gap-8">
-                        <Link href="/demo" className="hover:text-rose-500">Support</Link>
+                    <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                        <p>© 2026 BolChat. All rights reserved.</p>
+                        <div className="flex gap-8">
+                            <Link href="/demo" className="hover:text-rose-500">Support</Link>
+                        </div>
+                    </div>
+                    <div className="flex flex-wrap items-center justify-center gap-4">
+                        <a href="https://peerlist.io/company/bolchat_tech" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+                            <span className="w-5 h-5 rounded-full bg-[#00AA45] flex items-center justify-center text-[11px] text-white font-bold leading-none">P</span>
+                            <span className="font-semibold text-xs">Peerlist</span>
+                        </a>
+                        <a href="https://www.producthunt.com/products/bolchat?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-bolchat" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
+                            <img alt="BolChat - AI chatbot platform to turn website visitors into customers | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1134584&theme=light&t=1777446751621" className="h-[36px] w-auto" />
+                        </a>
                     </div>
                 </div>
             </Container>

@@ -264,7 +264,7 @@ export default function AboutPage() {
                             href="https://www.crunchbase.com/organization/bolchat"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl border border-slate-200 bg-white hover:border-slate-300 hover:shadow-sm transition-all group"
+                            className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl border border-slate-200 bg-white hover:border-slate-300 hover:shadow-sm transition-all group h-[48px]"
                             aria-label="BolChat on Crunchbase"
                         >
                             <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
@@ -272,7 +272,30 @@ export default function AboutPage() {
                             </svg>
                             <span className="text-sm font-bold text-slate-600 group-hover:text-slate-900 transition-colors">Crunchbase</span>
                         </a>
-                        {/* More directory badges added here as listed */}
+                        <a
+                            href="https://peerlist.io/company/bolchat_tech"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl border border-slate-200 bg-white hover:border-slate-300 hover:shadow-sm transition-all group h-[48px]"
+                            aria-label="BolChat on Peerlist"
+                        >
+                            <span className="w-4 h-4 rounded-full bg-[#00AA45] flex items-center justify-center text-[10px] text-white font-bold leading-none">P</span>
+                            <span className="text-sm font-bold text-slate-600 group-hover:text-slate-900 transition-colors">Peerlist</span>
+                        </a>
+                        <a
+                            href="https://www.producthunt.com/products/bolchat?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-bolchat"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center transition-transform hover:scale-105"
+                        >
+                            <img
+                                alt="BolChat - AI chatbot platform to turn website visitors into customers | Product Hunt"
+                                width="250"
+                                height="54"
+                                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1134584&theme=light&t=1777446751621"
+                                className="h-[48px] w-auto"
+                            />
+                        </a>
                     </div>
                 </div>
             </section>
