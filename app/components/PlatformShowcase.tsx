@@ -7,22 +7,22 @@ import Link from "next/link";
 
 export function PlatformShowcase() {
     return (
-        <section className="py-24 bg-slate-50 overflow-hidden border-y border-slate-100">
+        <section className="py-16 md:py-20 bg-slate-50 overflow-hidden border-y border-slate-100">
             <Container maxWidth="max-w-6xl">
                 <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
                     {/* Left Copy */}
                     <div className="flex-1 space-y-8">
                         <div>
-                            <span className="text-rose-500 font-bold uppercase tracking-wider text-sm mb-4 block">
+                            <span className="text-[11px] font-bold tracking-[0.15em] uppercase text-rose-500 mb-4 block">
                                 AI Agent Configuration
                             </span>
-                            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
+                            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4">
                                 Your AI agent. Your rules.{" "}
                                 <span className="text-rose-500">Zero hallucinations.</span>
                             </h2>
                         </div>
-                        <p className="text-lg text-slate-600 font-medium leading-relaxed max-w-lg">
+                        <p className="text-[15px] sm:text-lg text-slate-600 max-w-lg font-medium">
                             BolChat runs on a private RAG knowledge base — your data, your context. Use the visual Agent Builder to strictly define tone, instructions, and fallback constraints. Your AI never guesses.
                         </p>
 

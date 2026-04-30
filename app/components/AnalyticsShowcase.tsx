@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export function AnalyticsShowcase() {
     return (
-        <section className="py-24 bg-white overflow-hidden">
+        <section className="py-16 md:py-20 bg-white overflow-hidden">
             <Container maxWidth="max-w-6xl">
                 <div className="flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24">
 
@@ -28,15 +28,15 @@ export function AnalyticsShowcase() {
                     {/* Right Copy */}
                     <div className="flex-1 space-y-8">
                         <div>
-                            <span className="text-indigo-500 font-bold uppercase tracking-wider text-sm mb-4 block">
+                            <span className="text-[11px] font-bold tracking-[0.15em] uppercase text-indigo-500 mb-4 block">
                                 Real-Time Analytics
                             </span>
-                            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
+                            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4">
                                 Know exactly what your{" "}
                                 <span className="text-indigo-500">customers are asking.</span>
                             </h2>
                         </div>
-                        <p className="text-lg text-slate-600 font-medium leading-relaxed max-w-lg">
+                        <p className="text-[15px] sm:text-lg text-slate-600 max-w-lg font-medium">
                             Every query is logged and categorised. Track your AI agent&apos;s resolution rate, capture leads mid-conversation, and see exactly which questions need human attention — so you can close every gap.
                         </p>
 

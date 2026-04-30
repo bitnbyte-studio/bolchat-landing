@@ -66,8 +66,8 @@ function IntercomLogo() {
 
 function ZendeskLogo() {
     return (
-        <svg viewBox="0 0 130 40" className="h-8 w-auto" aria-label="Zendesk">
-            <text x="0" y="34" fontFamily="'Arial Black', sans-serif" fontWeight="900" fontSize="36" fill="#03363D" letterSpacing="-1">zendesk</text>
+        <svg viewBox="0 0 170 40" className="h-8 w-auto" aria-label="Zendesk">
+            <text x="0" y="34" fontFamily="'Arial Black', 'Inter', sans-serif" fontWeight="900" fontSize="36" fill="#03363D" letterSpacing="-1">zendesk</text>
         </svg>
     );
 }
@@ -90,10 +90,47 @@ function ZapierLogo() {
     );
 }
 
+function NextJsLogo() {
+    return (
+        <svg viewBox="0 0 180 180" className="h-9 w-9" aria-label="Next.js">
+            <circle cx="90" cy="90" r="90" fill="#000" />
+            <path d="M129.24 140.4L63.36 51.48v77.04h14.76V77.04l53.64 72.36a89.64 89.64 0 0 1-2.52 9z" fill="#fff" />
+            <path d="M123.3 51.48h-14.76v56.52h14.76V51.48z" fill="#fff" />
+        </svg>
+    );
+}
+
+function ReactLogo() {
+    return (
+        <svg viewBox="-11.5 -10.23174 23 20.46348" className="h-9 w-9" aria-label="React">
+            <circle cx="0" cy="0" r="2.05" fill="#61DAFB"/>
+            <g stroke="#61DAFB" strokeWidth="1" fill="none">
+                <ellipse rx="11" ry="4.2"/>
+                <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+                <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+            </g>
+        </svg>
+    );
+}
+
+function AngularLogo() {
+    return (
+        <svg viewBox="0 0 250 250" className="h-9 w-9" aria-label="Angular">
+            <path fill="#DD0031" d="M125 30L31.9 63.2l14.2 123.1L125 230l78.9-43.7 14.2-123.1z"/>
+            <path fill="#C3002F" d="M125 30v200l78.9-43.7 14.2-123.1z"/>
+            <path fill="#FFA300" d="M125 52.1l66.8 141.4h-21.4l-13.6-32.9H93.2l-13.6 32.9H58.2z"/>
+            <path fill="#fff" d="M125 52.1l45.4 96.1h-90.8z"/>
+        </svg>
+    );
+}
+
 const BRANDS = [
     { id: "shopify", Logo: ShopifyLogo, name: "Shopify" },
     { id: "slack", Logo: SlackLogo, name: "Slack" },
     { id: "wordpress", Logo: WordPressLogo, name: "WordPress" },
+    { id: "nextjs", Logo: NextJsLogo, name: "Next.js" },
+    { id: "react", Logo: ReactLogo, name: "React" },
+    { id: "angular", Logo: AngularLogo, name: "Angular" },
     { id: "hubspot", Logo: HubSpotLogo, name: "HubSpot" },
     { id: "intercom", Logo: IntercomLogo, name: "Intercom" },
     { id: "zendesk", Logo: ZendeskLogo, name: "Zendesk" },
@@ -115,7 +152,7 @@ export function EcosystemSection() {
                     Native integrations with your CRM, helpdesk, and e-commerce stack. Connect in minutes — no code required.
                 </p>
 
-                <div className="flex flex-wrap items-center justify-center gap-10 md:gap-14 grayscale opacity-60 transition-all duration-500 hover:grayscale-0 hover:opacity-100">
+                <div className="flex flex-wrap items-center justify-center gap-10 md:gap-14 transition-all duration-500">
                     {BRANDS.map(({ id, Logo, name }) => (
                         <div
                             key={id}

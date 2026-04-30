@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ArrowRight, Lock, CheckCircle2 } from "lucide-react";
 import { Container } from "../components/Container";
 
 const WEB3FORMS_ACCESS_KEY = "d26f0cc5-1e1c-4e3d-9202-4fe5ebd0a5ab";
@@ -115,14 +116,14 @@ export function DemoFormSection() {
 
     return (
         <section id="demo-form" className="relative py-12 md:py-16">
-            <Container className="grid items-start gap-16 lg:grid-cols-2">
+            <Container className="grid items-start gap-10 md:gap-16 lg:grid-cols-2">
 
                 {/* ── Left: Form ── */}
-                <div className="rounded-[3rem] border border-white/60 bg-white p-8 shadow-2xl md:p-12">
+                <div className="-mx-5 rounded-none border border-white/60 bg-white p-6 shadow-2xl sm:mx-0 sm:rounded-[2rem] sm:p-8 md:rounded-[3rem] md:p-12">
                     {submitted ? (
                         <div className="flex flex-col items-center justify-center py-16 text-center">
-                            <div className="mb-6 grid h-20 w-20 place-items-center rounded-full bg-green-100 text-4xl">
-                                ✓
+                            <div className="mb-6 grid h-20 w-20 place-items-center rounded-full bg-green-100 text-green-600">
+                                <CheckCircle2 className="h-10 w-10" />
                             </div>
                             <h3 className="mb-3 text-2xl font-bold text-slate-900">You&apos;re booked!</h3>
                             <p className="text-slate-500">
@@ -130,9 +131,9 @@ export function DemoFormSection() {
                             </p>
                         </div>
                     ) : (
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
                             {/* Name + Email */}
-                            <div className="grid gap-6 md:grid-cols-2">
+                            <div className="grid gap-5 md:grid-cols-2 md:gap-6">
                                 <div>
                                     <label className="mb-2 block text-sm font-bold text-slate-700">Full Name *</label>
                                     <input
@@ -141,7 +142,7 @@ export function DemoFormSection() {
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
                                         placeholder="John Doe"
-                                        className="h-14 w-full rounded-2xl border border-slate-100 bg-white px-6 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50"
+                                        className="h-14 w-full rounded-2xl border border-slate-100 bg-white px-4 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50 md:px-6"
                                     />
                                 </div>
                                 <div>
@@ -152,13 +153,13 @@ export function DemoFormSection() {
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                         placeholder="john@company.com"
-                                        className="h-14 w-full rounded-2xl border border-slate-100 bg-white px-6 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50"
+                                        className="h-14 w-full rounded-2xl border border-slate-100 bg-white px-4 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50 md:px-6"
                                     />
                                 </div>
                             </div>
 
                             {/* Company + Languages */}
-                            <div className="grid gap-6 md:grid-cols-2">
+                            <div className="grid gap-5 md:grid-cols-2 md:gap-6">
                                 <div>
                                     <label className="mb-2 block text-sm font-bold text-slate-700">Company Name *</label>
                                     <input
@@ -167,7 +168,7 @@ export function DemoFormSection() {
                                         value={company}
                                         onChange={(e) => setCompany(e.target.value)}
                                         placeholder="Acme Corp"
-                                        className="h-14 w-full rounded-2xl border border-slate-100 bg-white px-6 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50"
+                                        className="h-14 w-full rounded-2xl border border-slate-100 bg-white px-4 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50 md:px-6"
                                     />
                                 </div>
                                 <div>
@@ -175,7 +176,7 @@ export function DemoFormSection() {
                                     <select
                                         value={languages}
                                         onChange={(e) => setLanguages(e.target.value)}
-                                        className="h-14 w-full cursor-pointer appearance-none rounded-2xl border border-slate-100 bg-white px-6 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50"
+                                        className="h-14 w-full cursor-pointer appearance-none rounded-2xl border border-slate-100 bg-white px-4 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50 md:px-6"
                                     >
                                         <option>1–5 Languages</option>
                                         <option>6–15 Languages</option>
@@ -230,7 +231,7 @@ export function DemoFormSection() {
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
                                     placeholder="Tell us about your specific needs..."
-                                    className="h-32 w-full resize-none rounded-2xl border border-slate-100 bg-white p-6 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50"
+                                    className="h-32 w-full resize-none rounded-2xl border border-slate-100 bg-white p-4 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-50 md:p-6"
                                 />
                             </div>
 
@@ -241,9 +242,10 @@ export function DemoFormSection() {
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="h-16 w-full rounded-2xl bg-slate-900 text-lg font-bold text-white shadow-xl transition-all hover:bg-rose-600 active:scale-[0.98] disabled:opacity-70"
+                                className="group flex h-16 w-full items-center justify-center gap-2 rounded-2xl bg-slate-900 text-lg font-bold text-white shadow-xl transition-all hover:bg-rose-600 active:scale-[0.98] disabled:opacity-70"
                             >
-                                {loading ? "Booking your slot…" : "Schedule Demo →"}
+                                {loading ? "Booking your slot…" : "Schedule Demo"}
+                                {!loading && <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />}
                             </button>
                             <p className="text-center text-sm text-slate-400">
                                 We&apos;ll follow up within 24 hours with demo availability
@@ -283,7 +285,7 @@ export function DemoFormSection() {
                     {/* Trust note */}
                     <div className="flex items-center gap-4 rounded-2xl border border-rose-100/60 bg-rose-50/60 p-5">
                         <div className="grid h-10 w-10 flex-shrink-0 place-items-center rounded-full bg-rose-100 text-rose-500">
-                            🔒
+                            <Lock className="h-5 w-5" />
                         </div>
                         <p className="text-sm text-slate-600">
                             Your information is safe with us. We never share your data with third parties.

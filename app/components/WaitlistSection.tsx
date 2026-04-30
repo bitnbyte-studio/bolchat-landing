@@ -15,24 +15,22 @@ const benefits = [
 
 export function CTASection() {
     return (
-        <section className="py-16 md:py-24">
-            <Container maxWidth="max-w-5xl">
-                <div className="rounded-[2.5rem] bg-[#1a2135] p-10 md:p-16 shadow-2xl border border-slate-800 overflow-hidden relative">
+        <section className="py-16 md:py-24 bg-[#1a2135] border-y border-slate-800 relative overflow-hidden">
+            {/* Background glow */}
+            <div className="absolute top-0 right-0 h-[500px] w-[500px] translate-x-1/3 -translate-y-1/3 rounded-full bg-rose-500/10 blur-[120px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 h-[400px] w-[400px] -translate-x-1/3 translate-y-1/3 rounded-full bg-indigo-500/10 blur-[100px] pointer-events-none" />
 
-                    {/* Background glow */}
-                    <div className="absolute -top-24 -right-24 h-[400px] w-[400px] rounded-full bg-rose-500/10 blur-[100px] pointer-events-none" />
-                    <div className="absolute -bottom-24 -left-24 h-[300px] w-[300px] rounded-full bg-indigo-500/10 blur-[100px] pointer-events-none" />
+            <Container maxWidth="max-w-6xl" className="relative z-10">
+                <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12 lg:gap-20">
 
-                    <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12">
-
-                        {/* Left: Copy */}
-                        <div className="max-w-xl">
-                            <p className="text-rose-400 text-xs font-bold tracking-[0.2em] uppercase mb-4">
-                                Start resolving. Stop replying.
-                            </p>
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight mb-6 tracking-tight">
-                                Join 500+ businesses automating customer support with BolChat.
-                            </h2>
+                    {/* Left: Copy */}
+                    <div className="max-w-2xl">
+                        <span className="text-[11px] font-bold tracking-[0.15em] uppercase text-rose-400 mb-4 block">
+                            Start resolving. Stop replying.
+                        </span>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6 tracking-tight">
+                            Join 500+ businesses automating customer support with BolChat.
+                        </h2>
 
                             {/* Why BolChat checklist */}
                             <ul className="space-y-2.5 mb-8">
@@ -64,7 +62,6 @@ export function CTASection() {
                                 Free to start · No credit card required
                             </p>
                         </div>
-                    </div>
                 </div>
             </Container>
         </section>
