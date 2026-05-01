@@ -8,7 +8,7 @@ import {
   FileText, Globe, MessageSquare, Settings2,
   ChevronRight, ChevronDown, Sparkles, Shield, Target,
   Upload, RefreshCw, Languages, Search,
-  Pencil, Gauge, Users, TrendingUp, Menu, X,
+  Pencil, Gauge, Users, TrendingUp, Menu, X, Magnet
 } from "lucide-react";
 
 /* ═══════════════════════════════════════════════════════
@@ -41,6 +41,7 @@ const TOC = [
       { id: "am-templates", label: "Prompt Templates" },
       { id: "am-tuning", label: "Temperature & Confidence" },
       { id: "am-conversation", label: "Conversation Design" },
+      { id: "am-lead-capture", label: "Lead Capture" },
       { id: "am-multi", label: "Multi-Agent Strategy" },
     ],
   },
@@ -525,22 +526,43 @@ export function DocsContent() {
               </div>
 
               <SubHeading id="am-templates" icon={Brain} title="Prompt Templates for Common Use Cases" />
-              <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 mb-6">
-                <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-100 shadow-sm">
-                  <p className="text-base sm:text-lg font-extrabold text-rose-500 mb-2">🛒 E-Commerce Support</p>
-                  <p className="text-xs text-slate-500 leading-relaxed">Handles orders, returns, shipping, product recs. Temp: 0.2. Best with FAQ-style KB covering return policy, shipping times, product catalog.</p>
+              <Paragraph>Here are ready-to-use templates for different types of businesses. Copy these and customize them with your specific details!</Paragraph>
+              <div className="space-y-6 mb-8">
+                <div>
+                  <h4 className="font-bold text-slate-800 text-sm mb-2">🛒 E-Commerce & Retail Store</h4>
+                  <CodeBlock lang="System Prompt" code={`You are an AI shopping assistant for [Your Store Name]. Your job is to help customers find products, understand sizing/shipping, and process returns.
+
+Rules:
+- Be enthusiastic, helpful, and use emojis naturally ✨
+- If a user asks for recommendations, ask 1-2 clarifying questions before suggesting a product.
+- For shipping/returns, ALWAYS check the knowledge base for exact policies.
+- Never promise refunds that aren't guaranteed by policy.
+- If an item is out of stock, offer a similar alternative.
+- Keep responses short, visual, and easy to scan.`} />
                 </div>
-                <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-100 shadow-sm">
-                  <p className="text-base sm:text-lg font-extrabold text-blue-500 mb-2">💻 SaaS Onboarding</p>
-                  <p className="text-xs text-slate-500 leading-relaxed">Guides new users through setup. Temp: 0.3. Works best with step-by-step tutorials and getting-started guides.</p>
+
+                <div>
+                  <h4 className="font-bold text-slate-800 text-sm mb-2">💼 B2B SaaS & Tech Agency</h4>
+                  <CodeBlock lang="System Prompt" code={`You are a technical sales engineer for [Your Company]. You help website visitors understand our software, technical features, and pricing.
+
+Rules:
+- Maintain a professional, consultative, and knowledgeable tone.
+- When explaining features, highlight the business value (e.g., time saved, revenue increased).
+- If asked about competitors, highlight our unique strengths (as listed in the KB) without bashing them.
+- Do not make up technical capabilities. If unsure, say: "That's a great technical question. Let me connect you with an engineer."
+- Your ultimate goal is to help qualify the lead and explain value.`} />
                 </div>
-                <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-100 shadow-sm">
-                  <p className="text-base sm:text-lg font-extrabold text-emerald-500 mb-2">🎯 Lead Qualifier</p>
-                  <p className="text-xs text-slate-500 leading-relaxed">Asks qualifying questions before offering demos. Temp: 0.4. Include pricing tiers, feature comparison, case studies.</p>
-                </div>
-                <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-100 shadow-sm">
-                  <p className="text-base sm:text-lg font-extrabold text-amber-500 mb-2">📚 FAQ Bot</p>
-                  <p className="text-xs text-slate-500 leading-relaxed">Strictly answers from KB, zero improvisation. Temp: 0.1. Highest confidence. Upload only verified FAQ documents.</p>
+
+                <div>
+                  <h4 className="font-bold text-slate-800 text-sm mb-2">🏠 Real Estate & High-Ticket Services</h4>
+                  <CodeBlock lang="System Prompt" code={`You are a luxury concierge for [Your Agency]. You help clients discover properties, understand the buying process, and schedule viewings.
+
+Rules:
+- Use a highly polished, polite, and sophisticated tone.
+- Do not overwhelm the user with too much text. Share details on 1 or 2 properties at a time.
+- If they ask for pricing or mortgages, provide the general ranges from the KB, but remind them that rates vary.
+- For specific property inquiries, ALWAYS offer to schedule a private viewing.
+- If you don't know the answer, say "Let me have one of our senior agents look into that for you."`} />
                 </div>
               </div>
 
@@ -579,6 +601,24 @@ export function DocsContent() {
                 "Teaser message: Use something business-specific — '📦 Need help tracking your order?' converts better than 'Chat with us'.",
                 "Keep greetings under 30 words. Long greetings intimidate visitors and reduce engagement.",
               ]} />
+
+              <SubHeading id="am-lead-capture" icon={Magnet} title="Lead Capture Best Practices" />
+              <Paragraph>BolChat includes a powerful native Lead Capture system that automatically identifies when users share contact information (name, email, phone) and syncs it to your database. You can configure how proactively the bot asks for this info.</Paragraph>
+              <div className="grid sm:grid-cols-3 gap-3 sm:gap-4 mb-4">
+                <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-100 shadow-sm flex flex-col h-full">
+                  <h4 className="font-bold text-slate-800 text-sm mb-2">Passive Mode</h4>
+                  <p className="text-xs text-slate-500 leading-relaxed flex-1">The bot never asks for contact info proactively. It only captures details if the user voluntarily provides them in chat.</p>
+                </div>
+                <div className="p-4 sm:p-5 rounded-2xl bg-white border border-emerald-200 shadow-sm flex flex-col h-full bg-emerald-50/30">
+                  <h4 className="font-bold text-emerald-700 text-sm mb-2 flex items-center gap-1.5"><Sparkles className="w-3.5 h-3.5" /> Smart Mode</h4>
+                  <p className="text-xs text-emerald-600/90 leading-relaxed flex-1">Recommended. The bot waits for the user to signal genuine intent (e.g., asking for pricing or a demo) before naturally offering to follow up.</p>
+                </div>
+                <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-100 shadow-sm flex flex-col h-full">
+                  <h4 className="font-bold text-slate-800 text-sm mb-2">Proactive Mode</h4>
+                  <p className="text-xs text-slate-500 leading-relaxed flex-1">After answering the user's first real question, the bot immediately pivots and asks for their contact info to continue the conversation.</p>
+                </div>
+              </div>
+              <Warning>Avoid adding hardcoded rules to your System Prompt like "ALWAYS end every single message by asking for a demo." This forces the AI to be overly pushy and ignore natural conversational cues. Let the built-in Smart Lead Capture handle the timing!</Warning>
 
               <SubHeading id="am-multi" icon={Users} title="Multi-Agent Strategy" />
               <Paragraph>Different pages serve different purposes. Use separate agents optimized for each:</Paragraph>
