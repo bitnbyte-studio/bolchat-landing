@@ -167,20 +167,20 @@ export default function RootLayout({
         <Analytics />
 
 
-        {/* <Script
+        <Script
           src="https://server-farm-fqdvcndefdazdkb2.centralindia-01.azurewebsites.net/static/widget.js"
           data-key="bc_live_0qIRsR2o.Vsiq4J3WoGK57d6Yf7JBwLcYNMIsV76F"
           data-agent="a90f62b5-5449-4677-a409-b150ff4ed89a"
           data-api-url="https://server-farm-fqdvcndefdazdkb2.centralindia-01.azurewebsites.net"
           strategy="afterInteractive"
-        /> */}
-        <Script
+        />
+        {/* <Script
           src="http://192.168.1.12:8000/static/widget.js"
           data-key="bc_live_0qIRsR2o.Vsiq4J3WoGK57d6Yf7JBwLcYNMIsV76F"
           data-agent="a90f62b5-5449-4677-a409-b150ff4ed89a"
           data-api-url="http://192.168.1.12:8000"
           strategy="afterInteractive"
-        />
+        /> */}
       </body>
     </html>
   );
