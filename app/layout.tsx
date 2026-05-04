@@ -3,6 +3,7 @@ import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { JsonLd } from "./components/JsonLd";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -163,22 +164,23 @@ export default function RootLayout({
         className={`${inter.variable} ${outfit.variable} antialiased`}
       >
         {children}
+        <Analytics />
 
 
-        <Script
+        {/* <Script
           src="https://server-farm-fqdvcndefdazdkb2.centralindia-01.azurewebsites.net/static/widget.js"
           data-key="bc_live_0qIRsR2o.Vsiq4J3WoGK57d6Yf7JBwLcYNMIsV76F"
           data-agent="a90f62b5-5449-4677-a409-b150ff4ed89a"
           data-api-url="https://server-farm-fqdvcndefdazdkb2.centralindia-01.azurewebsites.net"
           strategy="afterInteractive"
-        />
-        {/* <Script
-          src="http://10.146.72.53:8000/static/widget.js"
+        /> */}
+        <Script
+          src="http://192.168.1.12:8000/static/widget.js"
           data-key="bc_live_0qIRsR2o.Vsiq4J3WoGK57d6Yf7JBwLcYNMIsV76F"
           data-agent="a90f62b5-5449-4677-a409-b150ff4ed89a"
-          data-api-url="http://10.146.72.53:8000"
+          data-api-url="http://192.168.1.12:8000"
           strategy="afterInteractive"
-        /> */}
+        />
       </body>
     </html>
   );
