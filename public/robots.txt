@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Content-Signal: ai-train=no, search=yes, ai-input=no
 
 # Block access to Next.js internals and CDN cache paths
 Disallow: /_next/

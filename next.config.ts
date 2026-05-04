@@ -44,6 +44,42 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/.well-known/http-message-signatures-directory",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "application/json",
+          },
+        ],
+      },
+      {
+        source: "/.well-known/api-catalog",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "application/linkset+json",
+          },
+        ],
+      },
+      {
+        source: "/.well-known/agent-skills/index.json",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "application/json",
+          },
+        ],
+      },
+      {
+        source: "/.well-known/mcp/server-card.json",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "application/json",
+          },
+        ],
+      },
+      {
         source: "/:path*",
         headers: [
           // Force HTTPS for 1 year (HSTS)
@@ -65,6 +101,11 @@ const nextConfig: NextConfig = {
           {
             key: "Referrer-Policy",
             value: "strict-origin-when-cross-origin",
+          },
+          // Link response headers for agent discovery (RFC 8288)
+          {
+            key: "Link",
+            value: '</docs>; rel="service-doc", </privacy>; rel="privacy-policy", </terms>; rel="terms-of-service"',
           },
         ],
       },

@@ -1,0 +1,12 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://bolchat.tech/",
+      "service-doc": [
+        {
+          "href": "https://bolchat.tech/docs"
+        }
+      ]
+    }
+  ]
+}

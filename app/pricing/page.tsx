@@ -26,7 +26,7 @@ const tiers = [
     {
         name: "Starter",
         icon: Zap,
-        tagline: "For early-stage startups and solo founders.",
+        tagline: "For early-stage startups and small companies.",
         description:
             "Get your AI agent live in under 10 minutes. Perfect for teams validating AI support automation for the first time.",
         features: [
@@ -37,7 +37,7 @@ const tiers = [
             "Email support",
             "Community access",
         ],
-        ctaText: "Get Started Free",
+        ctaText: "Get Started",
         ctaHref: "/contact",
         highlight: false,
         badge: null,
@@ -91,12 +91,12 @@ const faqs = [
         a: "Pricing is based on your monthly support volume, number of languages needed, integrations, and team size. We don't believe in one-size-fits-all plans — we build something that fits your actual usage.",
     },
     {
-        q: "Is there a free plan?",
-        a: "Yes. Starter is free to get up and running — deploy your AI agent, connect your knowledge base, and see it resolve real queries. Upgrade when you need more volume or features.",
+        q: "Can I try BolChat before purchasing?",
+        a: "Yes. We offer tailored trials for early-stage startups and small companies so you can see it resolve real queries before upgrading to more volume or features.",
     },
     {
-        q: "Do I need a credit card to start?",
-        a: "No credit card required for the Starter plan. You can explore the platform, test multilingual support, and validate BolChat before committing to anything.",
+        q: "Do I need a credit card to get a quote?",
+        a: "No credit card required to request a quote or book a demo. We'll understand your needs first and then issue a clear proposal.",
     },
     {
         q: "Can I get a custom quote for my team?",
@@ -173,8 +173,13 @@ export default function PricingPage() {
                                         Pricing
                                     </p>
                                     <p className={`text-xl font-bold mt-1 ${tier.highlight ? "text-white" : "text-slate-900"}`}>
-                                        {tier.name === "Starter" ? "Free to start" : "Tailored to your needs"}
+                                        {tier.name === "Starter" ? "Custom tailored" : "Tailored to your needs"}
                                     </p>
+                                    {tier.name === "Starter" && (
+                                        <p className={`text-xs mt-1 ${tier.highlight ? "text-slate-400" : "text-slate-400"}`}>
+                                            Affordable for small teams & solo founders
+                                        </p>
+                                    )}
                                     {tier.name !== "Starter" && (
                                         <p className={`text-xs mt-1 ${tier.highlight ? "text-slate-400" : "text-slate-400"}`}>
                                             Talk to us — we'll build your plan in 24 hrs

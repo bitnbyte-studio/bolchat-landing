@@ -59,7 +59,7 @@ export function CTASection() {
                                 Talk to Sales
                             </Link>
                             <p className="text-center text-xs text-slate-500 font-medium">
-                                Free to start · No credit card required
+                                Tailored trials available · No credit card required
                             </p>
                         </div>
                 </div>

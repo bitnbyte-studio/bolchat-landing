@@ -1,0 +1,15 @@
+{
+  "serverInfo": {
+    "name": "BolChat Web Assistant Server",
+    "version": "1.0.0"
+  },
+  "transport": {
+    "type": "sse",
+    "endpoint": "https://bolchat.tech/api/mcp"
+  },
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    }
+  }
+}

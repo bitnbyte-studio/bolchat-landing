@@ -59,9 +59,9 @@ const softwareSchema = {
         "BolChat is an autonomous AI agent platform that resolves customer support queries in 50+ languages, captures leads, and escalates intelligently — 24/7, without adding headcount.",
     offers: {
         "@type": "Offer",
-        price: "0",
+        price: "Contact for pricing",
         priceCurrency: "USD",
-        description: "Free to start. Custom plans available based on support volume, languages, and team size. Contact sales for a tailored quote.",
+        description: "Custom plans available based on support volume, languages, and team size. Contact sales for a tailored quote.",
     },
     featureList: [
         "50+ Language Support",

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agentskills.io/v0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "bolchat-customer-support",
+      "type": "customer-support",
+      "description": "Multi-lingual autonomous customer support and AI lead capture",
+      "url": "https://bolchat.tech/features",
+      "sha256": "47a164b3c990b769f37c4e514f4477ee59cae564ca4b6f6b5f4cbe56d7731991"
+    }
+  ]
+}
