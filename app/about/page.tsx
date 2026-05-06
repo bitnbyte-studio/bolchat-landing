@@ -296,6 +296,18 @@ export default function AboutPage() {
                                 className="h-[48px] w-auto"
                             />
                         </a>
+                        <a
+                            href="https://www.saashub.com/bolchat-tech?utm_source=badge&utm_campaign=badge&utm_content=bolchat-tech&badge_variant=color&badge_kind=approved"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center transition-transform hover:scale-105"
+                        >
+                            <img
+                                src="https://cdn-b.saashub.com/img/badges/approved-color.png?v=1"
+                                alt="BolChat.tech badge"
+                                className="h-[48px] w-auto"
+                            />
+                        </a>
                     </div>
                 </div>
             </section>
